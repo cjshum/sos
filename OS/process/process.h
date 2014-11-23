@@ -7,8 +7,11 @@ struct process
 {
 	int a;
 	int p[6];
-	int isInCore;
+	bool isInCore;
+	int cpuTimeUsed;
 
+	process();
 	process(int a, int p[]);
 	bool isDoingIO();
+	void setNewValues(int a, int p[]);
 };
