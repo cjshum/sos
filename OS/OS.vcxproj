@@ -76,14 +76,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MemMgr\SpaceBlock.cpp" />
+    <ClCompile Include="MemMgr\WorstFit.cpp" />
     <ClCompile Include="process\process.cpp" />
-    <ClCompile Include="youtfile.cpp" />
+    <ClCompile Include="Node\Node.cpp" />
+    <ClCompile Include="Queue\Queue.cpp" />
+    <ClCompile Include="yourfile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="sosvc9.obj" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="global.h" />
+    <ClInclude Include="Global.h" />
     <ClInclude Include="process\process.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

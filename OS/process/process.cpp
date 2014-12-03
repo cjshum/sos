@@ -9,12 +9,6 @@ process::process(int a, int p[])
 	{
 		this->p[i] = p[i];
 	}
-	isInCore = false;
-}
-
-bool process::isDoingIO()
-{
-	return (a == REQ_IO);
 }
 
 void process::setNewValues(int a, int p[])

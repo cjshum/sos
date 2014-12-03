@@ -1,11 +1,35 @@
 #pragma once
 
 // define enums for drum directions
-static enum drumDir { TO_CORE, TO_DRUM };
+enum
+{	TO_CORE		= 0,
+	TO_DRUM		= 1
+};
 
 // define enums for possible p-register values
-static enum pValues { NOT_USED0, JOB_NUM, JOB_ADDR, JOB_SIZE, JOB_MAX_TIME, JOB_CURR_TIME };
+enum
+{	JOB_NUM			= 1,
+	JOB_ADDR		= 2,
+	JOB_SIZE		= 3,
+	JOB_MAX_TIME	= 4,
+	JOB_CURR_TIME	= 5
+};
 
 // define enums and string description for possible a-values
-static enum aValues { NOT_USED1, CPU_IDLE, CPU_RUN, NOT_USED2, NOT_USED3, REQ_TERM, REQ_IO, REQ_BLOCK };
-static const char *aValString[] = { "", "Idle CPU", "User Mode", "", "", "Termination Request", "I/O Request", "Block Request" };
+enum
+{	CPU_IDLE	= 1,
+	CPU_RUN		= 2,
+	REQ_TERM	= 5,
+	REQ_IO		= 6,
+	REQ_BLOCK	= 7
+};
+static const char *aValString[] =
+{	"",
+	"Idle CPU",				// a=1
+	"User Mode",			// a=2
+	"",
+	"",
+	"Termination Request",	// a=5
+	"I/O Request",			// a=6
+	"Block Request"			// a=7
+};
