@@ -1,27 +1,5 @@
-﻿Build started 12/2/2014 3:45:16 PM.
-     1>Project "C:\Users\First M. Last\Source\Repos\sos\OS\OS.vcxproj" on node 2 (Rebuild target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MemMgr\SpaceBlock.cpp MemMgr\WorstFit.cpp process\process.cpp Node\Node.cpp Queue\Queue.cpp yourfile.cpp
-         yourfile.cpp
-     1>c:\users\first m. last\source\repos\sos\os\yourfile.cpp(171): warning C4553: '==' : operator has no effect; did you intend '='?
-         Queue.cpp
-         Node.cpp
-         process.cpp
-         WorstFit.cpp
-         SpaceBlock.cpp
-         Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\First M. Last\Source\Repos\sos\Debug\OS.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\First M. Last\Source\Repos\sos\Debug\OS.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\First M. Last\Source\Repos\sos\Debug\OS.lib" /MACHINE:X86 Debug\SpaceBlock.obj
-         Debug\WorstFit.obj
-         Debug\process.obj
-         Debug\Node.obj
-         Debug\Queue.obj
-         Debug\yourfile.obj
-         sosvc9.obj
-     1>LINK : warning LNK4098: defaultlib 'LIBCMT' conflicts with use of other libs; use /NODEFAULTLIB:library
-         OS.vcxproj -> C:\Users\First M. Last\Source\Repos\sos\Debug\OS.exe
-     1>Done Building Project "C:\Users\First M. Last\Source\Repos\sos\OS\OS.vcxproj" (Rebuild target(s)).
+﻿Build started 12/14/2014 7:42:59 PM.
 
 Build succeeded.
 
-Time Elapsed 00:00:01.35
+Time Elapsed 00:00:00.01
