@@ -12,6 +12,7 @@ extern list<int> *drumQueue;
 extern list<int> *readyQueue;
 extern list<int> *diskQueue;
 extern list<int> *waitingQueue;
+extern list<int> *terminationQueue;
 
 extern int jobInDrum;
 extern int jobInCpu;

@@ -7,6 +7,7 @@ list<int> *drumQueue;
 list<int> *readyQueue;
 list<int> *diskQueue;
 list<int> *waitingQueue;
+list<int> *terminationQueue;
 
 int jobInDrum;
 int jobInCpu;

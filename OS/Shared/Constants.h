@@ -20,7 +20,7 @@ namespace px
 		JOB_PRIORITY = 2,
 		JOB_MEM_ADDR = 2,
 		JOB_SIZE = 3,
-		JOB_TIME_ALLOWED = 4,
+		JOB_TIME_ALLOW = 4,
 		JOB_TIME_SLICE = 4,
 		JOB_TIME_CURR = 5
 	};

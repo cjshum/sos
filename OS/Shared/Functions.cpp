@@ -9,6 +9,7 @@ void initVariables()
 	readyQueue = new list<int>();
 	diskQueue = new list<int>();
 	waitingQueue = new list<int>();
+	terminationQueue = new list<int>();
 
 	jobInDrum = UNDEFINED;
 	jobInCpu = UNDEFINED;
@@ -21,9 +22,10 @@ void setupDrum(int p[], int swapDir)
 	// queue the job for drum operation
 	drumQueue->push_back(p[px::JOB_NUM]);
 
-	// save directoin of the swap
+	// save direction of the swap
 	list<Job>::iterator jobPointer = searchJob(p[px::JOB_NUM]);
-	jobPointer->j[jx::JOB_SWAP_DIR] = swapDir;
+	if (jobPointer != jobTable->end())
+		jobPointer->j[jx::JOB_SWAP_DIR] = swapDir;
 }
 
 // runs a job on the drum queue
@@ -51,11 +53,15 @@ void runDrum()
 						jobPointer->j[jx::JOB_MEM_ADDR],
 						jobPointer->j[jx::JOB_SWAP_DIR]
 					);
+					// set this job to be using the drum
+					jobInDrum = jobPointer->j[jx::JOB_NUM];
+					// remove the job from the drum queue
+					drumQueue->erase(jobDrumPtr);
 				}
 			}
 
 			// if the job wants to be swapped out of memory
-			else
+			else if (jobPointer->j[jx::JOB_SWAP_DIR] == TO_DRUM)
 			{
 				siodrum
 				(
@@ -64,12 +70,11 @@ void runDrum()
 					jobPointer->j[jx::JOB_MEM_ADDR],
 					jobPointer->j[jx::JOB_SWAP_DIR]
 				);
+				// set this job to be using the drum
+				jobInDrum = jobPointer->j[jx::JOB_NUM];
+				// remove the job from the drum queue
+				drumQueue->erase(jobDrumPtr);
 			}
-
-			// remove the job from the drum queue
-			drumQueue->erase(jobDrumPtr);
-			// set this job to be using the drum
-			jobInDrum = jobPointer->j[jx::JOB_NUM];
 		}
 		
 	}
@@ -127,11 +132,10 @@ void runDisk()
 		if (diskQueue->size() > 0)
 		{
 			int nextJob = diskQueue->front();
-			if (diskQueue->size() > 0)
-			{
-				siodisk(nextJob);
-				jobInDisk = nextJob;
-			}
+			// release disk for other jobs
+			siodisk(nextJob);
+			jobInDisk = nextJob;
+			diskQueue->erase(searchQueue(jobInDisk, diskQueue));
 		}
 	}
 }
@@ -145,20 +149,32 @@ void verbose(char* interruptType, int &a, int p[])
 	printf("Status: %s\n", aValString[a]);
 	printf("Base Address: %i\n", p[px::JOB_MEM_ADDR]);
 	printf("Job size: %i\n", p[px::JOB_SIZE]);
-	printf("Max CPU time: %i\n", p[px::JOB_TIME_ALLOWED]);
+	printf("Max CPU time: %i\n", p[px::JOB_TIME_ALLOW]);
 	printf("Current time: %i\n", p[px::JOB_TIME_CURR]);
 	printf("Job using Drum: %i\n", jobInDrum);
 	printf("Job using CPU: %i\n", jobInCpu);
 	printf("Job using Disk: %i\n", jobInDisk);
+	printf("Items in Ready Queue: %i\n", readyQueue->size());
+	printf("Items in Drum Queue: %i\n", drumQueue->size());
+	printf("Items in Disk Queue: %i\n", diskQueue->size());
 	printf("Items in Waiting Queue: %i\n", waitingQueue->size());
+	printf("Items in Termination Queue: %i\n", terminationQueue->size());
 	//printf("\n");
 	//system("pause");
 }
 
 void quickPrint(int value)
 {
-	printf("%i\n", value);
-	system("pause");
+	if (value >= 4)
+		printf("%i\n", value);
+	list<Job>::iterator jobPtr = searchJob(7);
+	if (jobPtr != jobTable->end())
+	{
+		jobPtr->printJobInfo();
+		MemMgr.PrintMemoryBlocks();
+		printf("job using drum: %i\n", jobInDrum);
+	}
+	//system("pause");
 }
 
 list<Job>::iterator searchJob(int jobNumber)
@@ -211,3 +227,23 @@ public:
 		this->objPtr = &obj;
 	}
 };
+
+void setupFCFS(int &a, int p[])
+{
+
+}
+
+void runFCFS(int &a, int p[])
+{
+
+}
+
+void setupRR(int &a, int p[])
+{
+
+}
+
+void runRR(int &a, int p[])
+{
+
+}
