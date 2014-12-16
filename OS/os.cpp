@@ -15,18 +15,13 @@ void Crint(int &a, int p[])
 {
 	verbose("arrived Crint", a, p);
 
-	// save the running job back to the ready queue
-	if (jobInCpu != UNDEFINED)
-	{
-		readyQueue->push_front(jobInCpu);
-		jobInCpu = UNDEFINED;
-	}
+	saveCurrentJob();
 
 	// add new job into job-table
 	jobTable->push_back(Job(p));
 
 	// schedule drum operations
-	setupDrum(p, TO_CORE);
+	setupDrum(p[px::JOB_NUM], TO_CORE);
 	runDrum();
 
 	// run availabe jobs
@@ -39,61 +34,17 @@ void Drmint(int &a, int p[])
 {
 	verbose("arrived Drmint", a, p);
 
-	// need to find a generic fix for jobs that finish swapping
-	// and no job is using the cpu. job 7 is one of such case
-	if (jobInDrum == 7)
+	saveCurrentJob();
+
+	list<Job>::iterator jobPointer = searchJob(jobInDrum);
+	// if the job finished moving to core
+	if (jobPointer->j[jx::JOB_SWAP_DIR] == TO_CORE)
 	{
-		list<Job>::iterator jobPointer = searchJob(jobInDrum);
-		if (jobPointer->j[jx::JOB_SWAP_DIR] == TO_CORE)
-		{
-			setupCpu(jobPointer->j[jx::JOB_NUM]);
-		}
-		else
-		{
-			waitingQueue->push_back(jobPointer->j[jx::JOB_NUM]);
-		}
-		jobInDrum = UNDEFINED;
-		jobPointer->j[jx::JOB_SWAP_DIR] = UNDEFINED;
+		setupCpu(jobPointer->j[jx::JOB_NUM]);
 	}
-
-	if (jobInCpu != UNDEFINED)
-	{
-		readyQueue->push_front(jobInCpu);
-		jobInCpu = UNDEFINED;
-	}
-
-	// if the job no longer wants to be blocked
-	if (waitingQueue->size() > 0)
-	{
-		list<int>::iterator jobWaitPtr = searchQueue(p[px::JOB_NUM], waitingQueue);
-		if (jobWaitPtr != waitingQueue->end())
-		{
-			waitingQueue->erase(searchQueue(p[px::JOB_NUM], waitingQueue));
-			setupDrum(p, TO_CORE);
-		}
-		jobInDrum = UNDEFINED;
-	}
-
-	// otherwise job came from drum operations
-	if (jobInDrum != UNDEFINED)
-	{
-		list<Job>::iterator jobPointer = searchJob(jobInDrum);
-
-		// if the job finished moving to core
-		if (jobPointer->j[jx::JOB_SWAP_DIR] == TO_CORE)
-		{
-			setupCpu(jobPointer->j[jx::JOB_NUM]);
-		}
-
-		// if the job finished moving to drum
-		else
-		{
-			waitingQueue->push_back(jobPointer->j[jx::JOB_NUM]);
-		}
-		// reset using drum status from flag and job
-		jobInDrum = UNDEFINED;
-		jobPointer->j[jx::JOB_SWAP_DIR] = UNDEFINED;
-	}
+	// reset using drum status from flag and job
+	jobInDrum = UNDEFINED;
+	jobPointer->j[jx::JOB_SWAP_DIR] = UNDEFINED;
 
 	// run available jobs in drum and cpu queue
 	runDrum();
@@ -118,14 +69,13 @@ void Tro(int &a, int p[])
 		Svc(a, p);
 	}
 
-	// otherwise put it back to the ready queue
+//---------- put short-term scheduling algorithm here ---------
 	else
 	{
-//******* push front for first come first serve
 		readyQueue->push_front(jobInCpu);
+		jobInCpu = UNDEFINED;
 	}
 
-	jobInCpu = UNDEFINED;
 	runCpu(a, p);
 
 //	verbose("leaving Tro", a, p);
@@ -135,67 +85,61 @@ void Svc(int &a, int p[])
 {
 	verbose("arrived Svc", a, p);
 
-	// save the running job back to the ready queue
-	if (jobInCpu != UNDEFINED)
-	{
-		readyQueue->push_front(jobInCpu);
-		jobInCpu = UNDEFINED;
-	}
+	int jobReqSvc = jobInCpu;
+	list<Job>::iterator jobPointer = searchJob(jobReqSvc);
+
+	saveCurrentJob();
 	
 	switch (a)
 	{
 	// if a job request termination
 	case REQ_TERM:
-		// make sure that the job is not doing io
+		// if the job is in the termination queue
 		if (terminationQueue->size() > 0)
 		{
-			list<int>::iterator jobTermPtr = searchQueue(p[px::JOB_NUM], terminationQueue);
+			list<int>::iterator jobTermPtr = searchQueue(jobReqSvc, terminationQueue);
 			if (jobTermPtr != terminationQueue->end())
 			{
-				MemMgr.ReturnMemory(p[px::JOB_MEM_ADDR], p[px::JOB_SIZE]);
 				terminationQueue->erase(jobTermPtr);
-				jobTable->erase(searchJob(p[px::JOB_NUM]));
+				MemMgr.ReturnMemory(jobPointer->j[jx::JOB_MEM_ADDR], jobPointer->j[jx::JOB_SIZE]);
+				jobTable->erase(searchJob(jobReqSvc));
 			}
 		}
-		else if (jobInDisk != p[px::JOB_NUM])
+		// make sure that the job is not doing io
+		else if (jobInDisk != jobReqSvc)
 		{
-			MemMgr.ReturnMemory(p[px::JOB_MEM_ADDR], p[px::JOB_SIZE]);
-			readyQueue->erase(searchQueue(p[px::JOB_NUM], readyQueue));
-			jobTable->erase(searchJob(p[px::JOB_NUM]));
+			MemMgr.ReturnMemory(jobPointer->j[jx::JOB_MEM_ADDR], jobPointer->j[jx::JOB_SIZE]);
+			jobTable->erase(searchJob(jobReqSvc));
 		}
 		// if it is doing io put it in the termination queue
 		else
 		{
-			jobTable->erase(searchJob(p[px::JOB_NUM]));
-			terminationQueue->push_back(p[px::JOB_NUM]);
-			readyQueue->erase(searchQueue(p[px::JOB_NUM], readyQueue));
+			terminationQueue->push_back(jobReqSvc);
 		}
+		readyQueue->erase(searchQueue(jobReqSvc, readyQueue));
+
+		runDrum();
 		break;
 
 	//if a job requests io
 	case REQ_IO:
-		setupDisk(p[px::JOB_NUM]);
+		setupDisk(jobReqSvc);
 		runDisk();
 		break;
 
 	// if a job requests blocking
 	case REQ_BLOCK:
 		// move the job to the waiting queue
-		waitingQueue->push_back(p[px::JOB_NUM]);
-		readyQueue->erase(searchQueue(p[px::JOB_NUM], readyQueue));
-		
+		waitingQueue->push_back(jobReqSvc);
+		readyQueue->erase(searchQueue(jobReqSvc, readyQueue));
+
 		// if the job is not doing io, schedule it to drum
-		if (jobInDisk != p[px::JOB_NUM])
+		if (jobInDisk != jobReqSvc)
 		{
-			list<Job>::iterator jobPointer = searchJob(p[px::JOB_NUM]);
-			MemMgr.ReturnMemory(jobPointer->j[jx::JOB_MEM_ADDR], jobPointer->j[jx::JOB_SIZE]);
-			//setupDrum(p, TO_DRUM);
-/*--------------------------swap out before sawping in---------------------------*/
-			drumQueue->push_front(p[px::JOB_NUM]);
-			jobPointer->j[jx::JOB_SWAP_DIR] = TO_DRUM;
-/*--------------------------swap out before sawping in---------------------------*/
-			runDrum();
+			readyQueue->push_back(jobReqSvc);
+			waitingQueue->erase(searchQueue(jobReqSvc, waitingQueue));
 		}
+
 		break;
 	}
 
@@ -220,6 +164,20 @@ void Dskint(int &a, int p[])
 		readyQueue->push_back(*jobWaitPtr);
 		waitingQueue->erase(jobWaitPtr);
 	}
+
+/*
+	list<int>::iterator jobTermPtr = searchQueue(jobInDisk, terminationQueue);
+	if (jobTermPtr != terminationQueue->end())
+	{
+		if (jobInDisk == 9)
+			printf("");
+
+		jobInCpu = jobInDisk;
+		jobInDisk = UNDEFINED;
+		a = REQ_TERM;
+		Svc(a, p);
+	}
+*/
 
 	jobInDisk = UNDEFINED;
 	runDisk();

@@ -17,13 +17,13 @@ void initVariables()
 }
 
 // insert a job on the drum queue
-void setupDrum(int p[], int swapDir)
+void setupDrum(int jonNumber, int swapDir)
 {
 	// queue the job for drum operation
-	drumQueue->push_back(p[px::JOB_NUM]);
+	drumQueue->push_back(jonNumber);
 
 	// save direction of the swap
-	list<Job>::iterator jobPointer = searchJob(p[px::JOB_NUM]);
+	list<Job>::iterator jobPointer = searchJob(jonNumber);
 	if (jobPointer != jobTable->end())
 		jobPointer->j[jx::JOB_SWAP_DIR] = swapDir;
 }
@@ -39,7 +39,7 @@ void runDrum()
 		{
 			list<int>::iterator jobDrumPtr = drumQueue->begin();
 			list<Job>::iterator jobPointer = searchJob(*jobDrumPtr);
-			
+
 			// if the job wants to be in ram memory
 			if (jobPointer->j[jx::JOB_SWAP_DIR] == TO_CORE)
 			{
@@ -47,12 +47,12 @@ void runDrum()
 				if (jobPointer->j[jx::JOB_MEM_ADDR] != INSUFFICENT_MEM)
 				{
 					siodrum
-					(
+						(
 						jobPointer->j[jx::JOB_NUM],
 						jobPointer->j[jx::JOB_SIZE],
 						jobPointer->j[jx::JOB_MEM_ADDR],
 						jobPointer->j[jx::JOB_SWAP_DIR]
-					);
+						);
 					// set this job to be using the drum
 					jobInDrum = jobPointer->j[jx::JOB_NUM];
 					// remove the job from the drum queue
@@ -64,19 +64,28 @@ void runDrum()
 			else if (jobPointer->j[jx::JOB_SWAP_DIR] == TO_DRUM)
 			{
 				siodrum
-				(
+					(
 					jobPointer->j[jx::JOB_NUM],
 					jobPointer->j[jx::JOB_SIZE],
 					jobPointer->j[jx::JOB_MEM_ADDR],
 					jobPointer->j[jx::JOB_SWAP_DIR]
-				);
+					);
 				// set this job to be using the drum
 				jobInDrum = jobPointer->j[jx::JOB_NUM];
 				// remove the job from the drum queue
 				drumQueue->erase(jobDrumPtr);
 			}
 		}
-		
+	}
+}
+
+// saves the current job
+void saveCurrentJob()
+{
+	if (jobInCpu != UNDEFINED)
+	{
+		readyQueue->push_front(jobInCpu);
+		jobInCpu = UNDEFINED;
 	}
 }
 

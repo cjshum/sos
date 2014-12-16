@@ -14,8 +14,9 @@ extern void Dskint(int &a, int p[]);
 
 // function prototypes to be used in OS
 void initVariables();
-void setupDrum(int p[], int swapDir);
+void setupDrum(int jobNumber, int swapDir);
 void runDrum();
+void saveCurrentJob();
 void setupCpu(int jobNumber);
 void runCpu(int &a, int p[]);
 void setupDisk(int jobNumber);

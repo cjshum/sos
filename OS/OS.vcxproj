@@ -11,18 +11,23 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Constants.h" />
+    <ClInclude Include="Functions.h" />
     <ClInclude Include="Job\Job.h" />
     <ClInclude Include="Shared\Constants.h" />
     <ClInclude Include="Shared\Functions.h" />
     <ClInclude Include="Shared\Variables.h" />
+    <ClInclude Include="Variables.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Functions.cpp" />
     <ClCompile Include="MemMgr\SpaceBlock.cpp" />
     <ClCompile Include="MemMgr\WorstFit.cpp" />
     <ClCompile Include="Node\Node.cpp" />
     <ClCompile Include="os.cpp" />
     <ClCompile Include="Shared\Functions.cpp" />
     <ClCompile Include="Shared\Variables.cpp" />
+    <ClCompile Include="Variables.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="sos.obj" />
