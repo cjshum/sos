@@ -154,6 +154,7 @@ public:
 						prevNode->data->column[SIZE] += size + iterator->data->column[SIZE];
 						prevNode->next = iterator->next;
 						DeleteBlock(iterator);
+						SetLargestBlock();
 						return;
 					}
 					// or if the new space block can only merge with the previous block

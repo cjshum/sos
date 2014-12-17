@@ -129,6 +129,9 @@ void Svc(int &a, int p[])
 
 	// if a job requests blocking
 	case REQ_BLOCK:
+		if (p[px::JOB_TIME_CURR] == 61893)
+			printf("");
+
 		// move the job to the waiting queue
 		waitingQueue->push_back(jobReqSvc);
 		readyQueue->erase(searchQueue(jobReqSvc, readyQueue));
@@ -151,11 +154,7 @@ void Dskint(int &a, int p[])
 {
 	verbose("arrived Dskit", a, p);
 
-	if (jobInCpu != UNDEFINED)
-	{
-		readyQueue->push_front(jobInCpu);
-		jobInCpu = UNDEFINED;
-	}
+	saveCurrentJob();
 
 	// if the job that finished i/o was blocked
 	list<int>::iterator jobWaitPtr = searchQueue(jobInDisk, waitingQueue);
@@ -165,19 +164,14 @@ void Dskint(int &a, int p[])
 		waitingQueue->erase(jobWaitPtr);
 	}
 
-/*
 	list<int>::iterator jobTermPtr = searchQueue(jobInDisk, terminationQueue);
 	if (jobTermPtr != terminationQueue->end())
 	{
-		if (jobInDisk == 9)
-			printf("");
-
 		jobInCpu = jobInDisk;
 		jobInDisk = UNDEFINED;
 		a = REQ_TERM;
 		Svc(a, p);
 	}
-*/
 
 	jobInDisk = UNDEFINED;
 	runDisk();
