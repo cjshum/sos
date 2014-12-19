@@ -32,6 +32,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="MemMgr\SpaceBlock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="MemMgr\WorstFit.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -42,9 +45,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="os.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MemMgr\SpaceBlock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
