@@ -9,11 +9,11 @@ void initVariables()
 	readyQueue = new list<int>();
 	diskQueue = new list<int>();
 	waitingQueue = new list<int>();
-	terminationQueue = new list<int>();
 
 	jobInDrum = UNDEFINED;
 	jobInCpu = UNDEFINED;
 	jobInDisk = UNDEFINED;
+	jobWaitTerm = UNDEFINED;
 }
 
 // insert a job on the drum queue
@@ -39,7 +39,7 @@ void runDrum()
 		{
 			list<int>::iterator jobDrumPtr = drumQueue->begin();
 			list<Job>::iterator jobPointer = searchJob(*jobDrumPtr);
-
+			
 			// if the job wants to be in ram memory
 			if (jobPointer->j[jx::JOB_SWAP_DIR] == TO_CORE)
 			{
@@ -47,12 +47,12 @@ void runDrum()
 				if (jobPointer->j[jx::JOB_MEM_ADDR] != INSUFFICENT_MEM)
 				{
 					siodrum
-						(
+					(
 						jobPointer->j[jx::JOB_NUM],
 						jobPointer->j[jx::JOB_SIZE],
 						jobPointer->j[jx::JOB_MEM_ADDR],
 						jobPointer->j[jx::JOB_SWAP_DIR]
-						);
+					);
 					// set this job to be using the drum
 					jobInDrum = jobPointer->j[jx::JOB_NUM];
 					// remove the job from the drum queue
@@ -149,43 +149,6 @@ void runDisk()
 	}
 }
 
-// this prints the values of a and p for debug purposes
-void verbose(char* interruptType, int &a, int p[])
-{
-	if (!debug)	return;
-
-	printf("\nJob no[%i] %s\n", p[px::JOB_NUM], interruptType);
-	printf("Status: %s\n", aValString[a]);
-	printf("Base Address: %i\n", p[px::JOB_MEM_ADDR]);
-	printf("Job size: %i\n", p[px::JOB_SIZE]);
-	printf("Max CPU time: %i\n", p[px::JOB_TIME_ALLOW]);
-	printf("Current time: %i\n", p[px::JOB_TIME_CURR]);
-	printf("Job using Drum: %i\n", jobInDrum);
-	printf("Job using CPU: %i\n", jobInCpu);
-	printf("Job using Disk: %i\n", jobInDisk);
-	printf("Items in Ready Queue: %i\n", readyQueue->size());
-	printf("Items in Drum Queue: %i\n", drumQueue->size());
-	printf("Items in Disk Queue: %i\n", diskQueue->size());
-	printf("Items in Waiting Queue: %i\n", waitingQueue->size());
-	printf("Items in Termination Queue: %i\n", terminationQueue->size());
-	//printf("\n");
-	//system("pause");
-}
-
-void quickPrint(int value)
-{
-	if (value >= 4)
-		printf("%i\n", value);
-	list<Job>::iterator jobPtr = searchJob(7);
-	if (jobPtr != jobTable->end())
-	{
-		jobPtr->printJobInfo();
-		MemMgr.PrintMemoryBlocks();
-		printf("job using drum: %i\n", jobInDrum);
-	}
-	//system("pause");
-}
-
 list<Job>::iterator searchJob(int jobNumber)
 {
 	list<Job>::iterator searchIterator = jobTable->begin();
@@ -208,6 +171,53 @@ list<int>::iterator searchQueue(int jobNumber, list<int> *queueObject)
 		advance(searchIterator, 1);
 	}
 	return searchIterator;
+}
+
+void printQueue(list<int> *queueObject)
+{
+	list<int>::iterator searchIterator = queueObject->begin();
+	while (searchIterator != queueObject->end())
+	{
+		printf("%i ", *searchIterator);
+		advance(searchIterator, 1);
+	}
+	printf("\n");
+}
+
+// this prints the values of a and p for debug purposes
+void verbose(char *interruptType, int &a, int p[])
+{
+	if (!debug)	return;
+
+	printf("\nJob no[%i] %s\n", p[px::JOB_NUM], interruptType);
+	printf("Status: %s\n", aValString[a]);
+	printf("Base Address: %i\n", p[px::JOB_MEM_ADDR]);
+	printf("Job size: %i\n", p[px::JOB_SIZE]);
+	printf("Max CPU time: %i\n", p[px::JOB_TIME_ALLOW]);
+	printf("Current time: %i\n", p[px::JOB_TIME_CURR]);
+	printf("Job using Drum: %i\n", jobInDrum);
+	printf("Job using CPU: %i\n", jobInCpu);
+	printf("Job using Disk: %i\n", jobInDisk);
+	printf("Job waiting for Termination: %i\n", jobWaitTerm);
+	printf("Items in Ready Queue: %i\n", readyQueue->size());
+	printf("Items in Drum Queue: %i\n", drumQueue->size());
+	printf("Items in Disk Queue: %i\n", diskQueue->size());
+	printf("Items in Waiting Queue: %i\n", waitingQueue->size());
+
+	//printf("\n");
+	//system("pause");
+}
+
+void quickPrint(int value)
+{
+	list<Job>::iterator jobPtr = searchJob(7);
+	if (jobPtr != jobTable->end())
+	{
+		jobPtr->printJobInfo();
+		MemMgr.PrintMemoryBlocks();
+		printf("job using drum: %i\n", jobInDrum);
+	}
+	//system("pause");
 }
 
 /************************ COME BACK AND VIST******************************************/

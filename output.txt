@@ -1,0 +1,472 @@
+
+
+                            OPERATING SYSTEM SIMULATION
+
+
+
+ *** Clock :  314   job   1  terminated  normally (terminate svc issued) 
+   response time : 314  CPU Time : 21   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   4621    job    2 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 2000    # I/O operations completed: 2 
+ # I/O operations pending :   0 
+
+ *** Clock :  6265   job   3  terminated  abnormally (max cpu time exceeded) 
+   response time : 365  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   10815    job    4 terminated  abnormally (max cpu time exceeded)            
+ dilation :     1.0  CPU time : 3500    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+
+
+ * * * SYSTEM STATUS AT  60000  
+ =====================================
+
+ CPU : job #  6  running 
+ Disk : idle
+ Drum : idle 
+Memory :  77  K words in use
+Average dilation :  1.00    
+Average Response time :   339.50  
+
+
+                                CORE MAP
+
+ Partition   Job   Partition   Job   Partition   JobPartition   Job
+
+     0        0        25       5        50       6        75      6
+     1        0        26       5        51       6        76      6
+     2        0        27       5        52       6        77      6
+     3        0        28       5        53       6        78      6
+     4        0        29       5        54       6        79      6
+     5        0        30       5        55       6        80      6
+     6        0        31       5        56       6        81      6
+     7        0        32       5        57       6        82      6
+     8        0        33       5        58       6        83      6
+     9        0        34       5        59       6        84      6
+    10        5        35       5        60       6        85      6
+    11        5        36       5        61       6        86      6
+    12        5        37       5        62       6        87      0
+    13        5        38       5        63       6        88      0
+    14        5        39       5        64       6        89      0
+    15        5        40       6        65       6        90      0
+    16        5        41       6        66       6        91      0
+    17        5        42       6        67       6        92      0
+    18        5        43       6        68       6        93      0
+    19        5        44       6        69       6        94      0
+    20        5        45       6        70       6        95      0
+    21        5        46       6        71       6        96      0
+    22        5        47       6        72       6        97      0
+    23        5        48       6        73       6        98      0
+    24        5        49       6        74       6        99      0
+
+
+
+                            JOBTABLE 
+
+Job#  Size  Time CPUTime MaxCPU  I/O's Priority Blocked  Latched InCore Term
+          Arrived  Used  Time   Pending 
+
+
+  9   14  12949       0    1500    0      2        no      no      no     no
+  5   30   7330       6      14    0      2        no      no     yes     no
+  6   47   7340   49179   65000    0      5        no      no     yes     no
+  7   27   7359       0     100    0      1        no      no      no     no
+  8   10  10209       0      10    0      1        no      no      no     no
+ 10   30  16949       0      11    0      1        no      no      no     no
+ 11   16  19749       0      10    0      2        no      no      no     no
+ 12   19  22349       0     550    0      1        no      no      no     no
+ 13   23  25649       0    1400    0      2        no      no      no     no
+ 14    5  27049       0      17    0      1        no      no      no     no
+ 15   15  27079       0   40000    0      2        no      no      no     no
+ 16    6  27089       0      19    0      1        no      no      no     no
+ 17   10  27108       0    1300    0      2        no      no      no     no
+ 18    8  29958       0      15    0      1        no      no      no     no
+ 19    7  32698       0      21    0      2        no      no      no     no
+ 20   17  36698       0     131    0      1        no      no      no     no
+ 21   15  39498       0     153    0      2        no      no      no     no
+ 22   40  42098       0    1000    0      1        no      no      no     no
+ 23   11  45398       0      32    0      2        no      no      no     no
+ 24   14  46798       0      18    0      1        no      no      no     no
+ 25   17  46828       0    5300    0      2        no      no      no     no
+ 26   21  46838       0      62    0      1        no      no      no     no
+ 27   23  46857       0      17    0      2        no      no      no     no
+ 28    5  49707       0    7100    0      1        no      no      no     no
+ 29    8  52447       0      15    0      2        no      no      no     no
+ 30   15  56447       0   14000    0      1        no      no      no     no
+ 31   18  59247       0      23    0      2        no      no      no     no
+
+
+
+
+
+
+ Total jobs :  31       terminated : 4
+ % utilization CPU : 91.21   disk :  10.14  drum : 0.20 memory  : 5.98 
+
+
+
+
+ Clock :   60821    job    6 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 50000    # I/O operations completed: 50 
+ # I/O operations pending :   0 
+
+ *** Clock :  60826   job   5  terminated  normally (terminate svc issued) 
+   response time : 53496  CPU Time : 11   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  60924   job   7  terminated  normally (terminate svc issued) 
+   response time : 53565  CPU Time : 90   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  61030   job   9  terminated  normally (terminate svc issued) 
+   response time : 48081  CPU Time : 100   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  61051   job   8  terminated  normally (terminate svc issued) 
+   response time : 50842  CPU Time : 9   # I/O operations completed:  1
+    # I/O operations pending :  0 
+
+
+ Clock :   62351    job    13 terminated  normally (terminate svc issued)            
+ dilation :    28.0  CPU time : 1300    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  62361   job   10  terminated  normally (terminate svc issued) 
+   response time : 45412  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  62365   job   11  terminated  abnormally (max cpu time exceeded) 
+   response time : 42616  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ Clock :   65374    job    15 terminated  normally (terminate svc issued)            
+ dilation :    12.0  CPU time : 3000    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+ *** Clock :  65389   job   16  terminated  normally (terminate svc issued) 
+   response time : 38300  CPU Time : 15   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ Clock :   66595    job    17 terminated  normally (terminate svc issued)            
+ dilation :    32.0  CPU time : 1200    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  66616   job   14  terminated  normally (terminate svc issued) 
+   response time : 39567  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  67019   job   18  terminated  normally (terminate svc issued) 
+   response time : 37061  CPU Time : 13   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   67197    job    21 terminated  normally (terminate svc issued)            
+ dilation :   184.0  CPU time : 150    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ *** Clock :  67535   job   19  terminated  normally (terminate svc issued) 
+   response time : 34837  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   71412    job    20 terminated  normally (terminate svc issued)            
+ dilation :    16.0  CPU time : 130    # I/O operations completed: 21 
+ # I/O operations pending :   1 
+
+ Clock :   77581    job    12 terminated  normally (terminate svc issued)            
+ dilation :     6.0  CPU time : 500    # I/O operations completed: 83 
+ # I/O operations pending :   0 
+
+ *** Clock :  78221   job   24  terminated  abnormally (max cpu time exceeded) 
+   response time : 31423  CPU Time : 18   # I/O operations completed:  2
+    # I/O operations pending :  1 
+
+
+ Clock :   81013    job    25 terminated  normally (terminate svc issued)            
+ dilation :    13.0  CPU time : 2500    # I/O operations completed: 2 
+ # I/O operations pending :   0 
+
+ *** Clock :  81208   job   23  terminated  abnormally (max cpu time exceeded) 
+   response time : 35810  CPU Time : 32   # I/O operations completed:  5
+    # I/O operations pending :  0 
+
+
+ *** Clock :  83022   job   26  terminated  normally (terminate svc issued) 
+   response time : 36184  CPU Time : 60   # I/O operations completed:  9
+    # I/O operations pending :  1 
+
+
+ *** Clock :  83683   job   27  terminated  normally (terminate svc issued) 
+   response time : 36826  CPU Time : 14   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  84399   job   29  terminated  abnormally (max cpu time exceeded) 
+   response time : 31952  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+
+
+ * * * SYSTEM STATUS AT  120016  
+ =====================================
+
+ CPU : job #  28  running 
+ Disk running for job  22   since   120016   
+ Drum : idle 
+Memory :  60  K words in use
+Average dilation :  29.40    
+Average Response time :   36273.59  
+
+
+                                CORE MAP
+
+ Partition   Job   Partition   Job   Partition   JobPartition   Job
+
+     0        0        25       0        50      22        75      0
+     1        0        26       0        51      22        76      0
+     2        0        27       0        52      22        77      0
+     3        0        28       0        53      22        78     30
+     4        0        29       0        54      22        79     30
+     5        0        30      22        55      22        80     30
+     6        0        31      22        56      22        81     30
+     7        0        32      22        57      22        82     30
+     8        0        33      22        58      22        83     30
+     9        0        34      22        59      22        84     30
+    10        0        35      22        60      22        85     30
+    11        0        36      22        61      22        86     30
+    12        0        37      22        62      22        87     30
+    13        0        38      22        63      22        88     30
+    14        0        39      22        64      22        89     30
+    15        0        40      22        65      22        90     30
+    16        0        41      22        66      22        91     30
+    17        0        42      22        67      22        92     30
+    18        0        43      22        68      22        93     28
+    19        0        44      22        69      22        94     28
+    20        0        45      22        70       0        95     28
+    21        0        46      22        71       0        96     28
+    22        0        47      22        72       0        97     28
+    23        0        48      22        73       0        98      0
+    24        0        49      22        74       0        99      0
+
+
+
+                            JOBTABLE 
+
+Job#  Size  Time CPUTime MaxCPU  I/O's Priority Blocked  Latched InCore Term
+          Arrived  Used  Time   Pending 
+
+
+ 32   25  61847       0    2500    0      1        no      no      no     no
+ 33    8  65147       0      20    0      2        no      no      no     no
+ 34   10  66547       0    3500    0      1        no      no      no     no
+ 35   30  66577       0      14    0      2        no      no      no     no
+ 36   47  66587       0   65000    0      5        no      no      no     no
+ 37   27  66606       0     100    0      1        no      no      no     no
+ 38   10  69456       0      10    0      1        no      no      no     no
+ 41   16  78996       0      10    0      2        no      no      no     no
+ 39   14  72196       0    1500    0      2        no      no      no     no
+ 40   30  76196       0      11    0      1        no      no      no     no
+ 42   19  81596       0     550    0      1        no      no      no     no
+ 43   23  84896       0    1400    0      2        no      no      no     no
+ 44    5  86296       0      17    0      1        no      no      no     no
+ 45   15  86326       0   40000    0      2        no      no      no     no
+ 46    6  86336       0      19    0      1        no      no      no     no
+ 47   10  86355       0    1300    0      2        no      no      no     no
+ 48    8  89205       0      15    0      1        no      no      no     no
+ 22   40  42098     828    1000    1      1       yes     yes     yes     no
+ 49    7  91945       0      21    0      2        no      no      no     no
+ 50   17  95945       0     131    0      1        no      no      no     no
+ 51   15  98745       0     153    0      2        no      no      no     no
+ 52   40 101345       0    1000    0      1        no      no      no     no
+ 53   11 104645       0      32    0      2        no      no      no     no
+ 28    5  49707     732    7100    0      1        no      no     yes     no
+ 54   14 106045       0      18    0      1        no      no      no     no
+ 30   15  56447     726   14000    1      1       yes      no     yes     no
+ 31   18  59247       0      23    0      2        no      no      no     no
+ 55   17 106075       0    5300    0      2        no      no      no     no
+ 56   21 106085       0      62    0      1        no      no      no     no
+ 57   23 106104       0      17    0      2        no      no      no     no
+ 58    5 108954       0    7100    0      1        no      no      no     no
+ 59    8 111694       0      15    0      2        no      no      no     no
+ 60   15 115694       0   14000    0      1        no      no      no     no
+ 61   18 118494       0      23    0      2        no      no      no     no
+
+
+
+
+
+
+ Total jobs :  61       terminated : 27
+ % utilization CPU : 55.86   disk :  49.00  drum : 0.50 memory  : 44.48 
+
+
+
+
+ Clock :   123402    job    22 terminated  normally (terminate svc issued)            
+ dilation :     5.0  CPU time : 900    # I/O operations completed: 149 
+ # I/O operations pending :   1 
+
+ *** Clock :  123719   job   31  terminated  normally (terminate svc issued) 
+   response time : 64472  CPU Time : 21   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ Clock :   125719    job    32 terminated  normally (terminate svc issued)            
+ dilation :    31.0  CPU time : 2000    # I/O operations completed: 2 
+ # I/O operations pending :   0 
+
+ Clock :   129225    job    34 terminated  abnormally (max cpu time exceeded)            
+ dilation :    17.0  CPU time : 3500    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+ *** Clock :  129248   job   35  terminated  normally (terminate svc issued) 
+   response time : 62671  CPU Time : 11   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  129890   job   33  terminated  abnormally (max cpu time exceeded) 
+   response time : 64743  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+
+
+*** Clock :  165292 , ***FATAL ERROR :  4
+
+*** GENCRINT ERROR ** JOB TABLE FULL - OS PROCESSING JOBS TOO SLOWLY***
+
+Current Value of Registers:
+
+         a = 1 
+        p [1..5] =   36   30   47   1   165292 
+
+
+
+                          FINAL STATISTICS  
+
+
+
+ * * * SYSTEM STATUS AT  165292  
+ =====================================
+
+ CPU : idle 
+ Disk : idle
+ Drum : idle 
+Memory :  67  K words in use
+Average dilation :  26.69    
+Average Response time :   40426.85  
+
+
+                                CORE MAP
+
+ Partition   Job   Partition   Job   Partition   JobPartition   Job
+
+     0        0        25       0        50      36        75     36
+     1        0        26       0        51      36        76     36
+     2        0        27       0        52      36        77      0
+     3        0        28       0        53      36        78     30
+     4        0        29       0        54      36        79     30
+     5        0        30      36        55      36        80     30
+     6        0        31      36        56      36        81     30
+     7        0        32      36        57      36        82     30
+     8        0        33      36        58      36        83     30
+     9        0        34      36        59      36        84     30
+    10        0        35      36        60      36        85     30
+    11        0        36      36        61      36        86     30
+    12        0        37      36        62      36        87     30
+    13        0        38      36        63      36        88     30
+    14        0        39      36        64      36        89     30
+    15        0        40      36        65      36        90     30
+    16        0        41      36        66      36        91     30
+    17        0        42      36        67      36        92     30
+    18        0        43      36        68      36        93     28
+    19        0        44      36        69      36        94     28
+    20        0        45      36        70      36        95     28
+    21        0        46      36        71      36        96     28
+    22        0        47      36        72      36        97     28
+    23        0        48      36        73      36        98      0
+    24        0        49      36        74      36        99      0
+
+
+
+                            JOBTABLE 
+
+Job#  Size  Time CPUTime MaxCPU  I/O's Priority Blocked  Latched InCore Term
+          Arrived  Used  Time   Pending 
+
+
+ 64   10 125794       0    3500    0      1        no      no      no     no
+ 69   14 131443       0    1500    0      2        no      no      no     no
+ 70   30 135443       0      11    0      1        no      no      no     no
+ 71   16 138243       0      10    0      2        no      no      no     no
+ 36   47  66587   35377   65000    0      5        no      no     yes     no
+ 37   27  66606       0     100    0      1        no      no      no     no
+ 38   10  69456       0      10    0      1        no      no      no     no
+ 41   16  78996       0      10    0      2        no      no      no     no
+ 39   14  72196       0    1500    0      2        no      no      no     no
+ 40   30  76196       0      11    0      1        no      no      no     no
+ 42   19  81596       0     550    0      1        no      no      no     no
+ 43   23  84896       0    1400    0      2        no      no      no     no
+ 44    5  86296       0      17    0      1        no      no      no     no
+ 45   15  86326       0   40000    0      2        no      no      no     no
+ 46    6  86336       0      19    0      1        no      no      no     no
+ 47   10  86355       0    1300    0      2        no      no      no     no
+ 48    8  89205       0      15    0      1        no      no      no     no
+ 63    8 124394       0      20    0      2        no      no      no     no
+ 49    7  91945       0      21    0      2        no      no      no     no
+ 50   17  95945       0     131    0      1        no      no      no     no
+ 51   15  98745       0     153    0      2        no      no      no     no
+ 52   40 101345       0    1000    0      1        no      no      no     no
+ 53   11 104645       0      32    0      2        no      no      no     no
+ 28    5  49707     828    7100    0      1        no      no     yes     no
+ 54   14 106045       0      18    0      1        no      no      no     no
+ 30   15  56447     816   14000    0      1        no      no     yes     no
+ 65   30 125824       0      14    0      2        no      no      no     no
+ 55   17 106075       0    5300    0      2        no      no      no     no
+ 56   21 106085       0      62    0      1        no      no      no     no
+ 57   23 106104       0      17    0      2        no      no      no     no
+ 58    5 108954       0    7100    0      1        no      no      no     no
+ 59    8 111694       0      15    0      2        no      no      no     no
+ 60   15 115694       0   14000    0      1        no      no      no     no
+ 61   18 118494       0      23    0      2        no      no      no     no
+ 62   25 121094       0    2500    0      1        no      no      no     no
+ 66   47 125834       0   65000    0      5        no      no      no     no
+ 67   27 125853       0     100    0      1        no      no      no     no
+ 68   10 128703       0      10    0      1        no      no      no     no
+ 72   19 140843       0     550    0      1        no      no      no     no
+ 73   23 144143       0    1400    0      2        no      no      no     no
+ 74    5 145543       0      17    0      1        no      no      no     no
+ 75   15 145573       0   40000    0      2        no      no      no     no
+ 76    6 145583       0      19    0      1        no      no      no     no
+ 77   10 145602       0    1300    0      2        no      no      no     no
+ 78    8 148452       0      15    0      1        no      no      no     no
+ 79    7 151192       0      21    0      2        no      no      no     no
+ 80   17 155192       0     131    0      1        no      no      no     no
+ 81   15 157992       0     153    0      2        no      no      no     no
+ 82   40 160592       0    1000    0      1        no      no      no     no
+ 83   11 163892       0      32    0      2        no      no      no     no
+
+
+
+
+
+
+ Total jobs :  83       terminated : 33
+ % utilization CPU : 65.48   disk :  40.90  drum : 0.44 memory  : 48.88 
+
+
+

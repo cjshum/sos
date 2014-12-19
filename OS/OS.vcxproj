@@ -19,7 +19,6 @@
   <ItemGroup>
     <ClCompile Include="MemMgr\SpaceBlock.cpp" />
     <ClCompile Include="MemMgr\WorstFit.cpp" />
-    <ClCompile Include="Node\Node.cpp" />
     <ClCompile Include="os.cpp" />
     <ClCompile Include="Shared\Functions.cpp" />
     <ClCompile Include="Shared\Variables.cpp" />

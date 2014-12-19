@@ -21,9 +21,11 @@ void setupCpu(int jobNumber);
 void runCpu(int &a, int p[]);
 void setupDisk(int jobNumber);
 void runDisk();
+void terminateJob(int jobNumber);
 void verbose(char* interruptType, int &a, int p[]);
 void quickPrint(int value);
 
 // things that might go away
 list<Job>::iterator searchJob(int jobNumber);
 list<int>::iterator searchQueue(int jobNumber, list<int> *queueObject);
+void printQueue(list<int> *queueObject);

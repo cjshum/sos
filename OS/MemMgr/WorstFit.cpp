@@ -1,90 +1,52 @@
-#include <stdio.h>
-#include "..\Node\Node.cpp"
 #include "SpaceBlock.cpp"
+#include "..\Shared\Constants.h"
+#include <list>
+using namespace std;
 
-#pragma once
-
-enum WorstFitErr { INSUFFICENT_MEM=-1 };
+const int INSUFFICENT_MEM = -1;
 
 class WorstFit
 {
-private:
-	Node<SpaceBlock>* largestMemBlock;
-	Node<SpaceBlock>* front;
-
-	// goes through each free space block and sets largestMemBlock pointer to the
-	// largest available free space block
-	void SetLargestBlock()
-	{
-		Node<SpaceBlock>* iterator = front;
-		largestMemBlock = front;
-		while (iterator->next != NULL)
-		{
-			if (largestMemBlock->data->column[SIZE] < iterator->next->data->column[SIZE])
-				largestMemBlock = iterator->next;
-			iterator = iterator->next;
-		}
-	}
-
-	void DeleteBlock(Node<SpaceBlock>* deletingBlock)
-	{
-		Node<SpaceBlock>* prevNode = deletingBlock->prev;
-		Node<SpaceBlock>* nextNode = deletingBlock->next;
-
-		// the block to delete is the last one
-		if (front->next == NULL)
-		{
-			largestMemBlock = NULL;
-			front = NULL;
-		}
-		// re-link the previous and next block together
-		else
-		{
-			if (prevNode != NULL)
-				prevNode->next = nextNode;
-			if (nextNode != NULL)
-				nextNode->prev = prevNode;
-		}
-		delete deletingBlock->data;
-		delete deletingBlock;
-	}
-
 public:
-	WorstFit() {}
+	list<SpaceBlock> *memTable = new list<SpaceBlock>();
+	list<SpaceBlock>::iterator largestMemBlock;
 
+	// empty constructor
+	WorstFit() {};
+
+	// default constructor that initializes memory of any given size
 	WorstFit(const int memSize)
 	{
-		largestMemBlock = new Node<SpaceBlock>(SpaceBlock(memSize));
-		front = largestMemBlock;
+		memTable->push_front(SpaceBlock(memSize));
+		largestMemBlock = memTable->begin();
 	}
 
+	// 
 	int RequestMemory(const int size)
 	{
 		// if there is no memory left
-		if (largestMemBlock == NULL)
-			return INSUFFICENT_MEM;
+		if (largestMemBlock == memTable->end())
+			return UNDEFINED;
 		// if the requested memory size is greater than largest memory block left
-		if (size > largestMemBlock->data->column[SIZE])
-			return INSUFFICENT_MEM;
-		
+		if (size > largestMemBlock->fsp[SIZE])
+			return UNDEFINED;
 		// otherwise we have sufficent memory
 		else
 		{
 			// set the return base address to the largest block base address
-			int returnAddress = largestMemBlock->data->column[BASE_ADDRESS];
-			
+			int returnAddress = largestMemBlock->fsp[BASE_ADDRESS];
 			// if the requested size is the same as the largest block
 			// delete the largest block
-			if (size == largestMemBlock->data->column[SIZE])
+			if (size == largestMemBlock->fsp[SIZE])
 			{
-				DeleteBlock(largestMemBlock);
+				memTable->erase(largestMemBlock);
 			}
 			else
 			{
 				// otherwise change the size of the largest block
 				// and also change the base address of the largest block
-				largestMemBlock->data->column[SIZE] -= size;
-				largestMemBlock->data->column[BASE_ADDRESS] += size;
+				largestMemBlock->fsp[SIZE] -= size;
+				largestMemBlock->fsp[BASE_ADDRESS] += size;
 			}
 			// set the new largest block
 			SetLargestBlock();
@@ -93,107 +55,119 @@ public:
 		}
 	}
 
+	// goes through the memory table to find the largest block of free memory
+	void SetLargestBlock()
+	{
+		list<SpaceBlock>::iterator iterator = memTable->begin();
+		largestMemBlock = memTable->begin();
+		advance(iterator, 1);
+		while (iterator != memTable->end())
+		{
+			if (largestMemBlock->fsp[SIZE] < iterator->fsp[SIZE])
+				largestMemBlock = iterator;
+			advance(iterator, 1);
+		}
+	}
 
 	void ReturnMemory(const int baseAddress, const int size)
 	{
 		// if there is no free space left, then make a new
-		// free space and make the largestMemBlock and front
-		// point at it
-		if (largestMemBlock == NULL)
+		// free space and make the largestMemBlock and front point at it
+		if (largestMemBlock == memTable->end())
 		{
-			largestMemBlock = new Node<SpaceBlock>(SpaceBlock(size, baseAddress));
-			front = largestMemBlock;
+			memTable->push_front(SpaceBlock(size, baseAddress));
+			largestMemBlock = memTable->begin();
+			return;
 		}
 
-		// otherwise, there is some other free space
-		// blocks that we might need to merge with
+		// find the position where the memory block might belong to
+		list<SpaceBlock>::iterator iterator = memTable->begin();
+		while (iterator != memTable->end())
+		{
+			if (baseAddress < iterator->fsp[BASE_ADDRESS])
+				break;
+			advance(iterator, 1);
+		}
+
+		// if the block belongs somewhere at the begining
+		if (iterator == memTable->begin())
+		{
+			// if the block cannot merge and belongs at the begining
+			if (baseAddress + size < iterator->fsp[BASE_ADDRESS])
+			{
+				memTable->push_front(SpaceBlock(size, baseAddress));
+				SetLargestBlock();
+			}
+
+			// if the block belongs at the begining and can merge with the next block
+			else if (baseAddress + size == iterator->fsp[BASE_ADDRESS])
+			{
+				iterator->fsp[BASE_ADDRESS] -= size;
+				iterator->fsp[SIZE] += size;
+				SetLargestBlock();
+			}
+		}
 		else
 		{
-			// a pointer that will loop through the blocks
-			// to se where to put the free space memory block
-			Node<SpaceBlock>* iterator = front;
-			Node<SpaceBlock>* prevNode;
-			// while i haven't gone through the entire linked list
-			while (iterator != NULL)
+			list<SpaceBlock>::iterator prevBlock = prev(iterator);
+			// if the memory block belongs somewhere at the ned
+			if (iterator == memTable->end())
 			{
-				// if the returning block is after the current pointing block
-				// move the iterator to the next block
-				if (baseAddress + size  > iterator->data->column[BASE_ADDRESS])
-					iterator = iterator->next;
+				// if the memory block can merge with the previous block, do so
+				if (prevBlock->fsp[BASE_ADDRESS] + prevBlock->fsp[SIZE] == baseAddress)
+				{
+					prevBlock->fsp[SIZE] += size;
+					SetLargestBlock();
+				}
+				// otherwise a new block is insterted at the end
 				else
 				{
-					prevNode = iterator->prev;
-					// if i am pointing to the first block
-					if (prevNode == NULL)
-					{
-						// if i can merge with the next block, don't have to create a new
-						// node, just adjust the base address and size of the next block
-						if (baseAddress + size == iterator->data->column[BASE_ADDRESS])
-						{
-							iterator->data->column[BASE_ADDRESS] -= size;
-							iterator->data->column[SIZE] += size;
-							SetLargestBlock();
-							return;
-						}
-						// create a new free space block and set is as the front block
-						else
-						{
-							Node<SpaceBlock>* newBlock = new Node<SpaceBlock>(SpaceBlock(size, baseAddress));
-							newBlock->next = iterator;
-							iterator->prev = newBlock;
-							front = newBlock;
-							SetLargestBlock();
-							return;
-						}
-					}
-					// otherwise, our block belongs somewhere in the middle
-
-					// if the new space block can merge with the previous and next block
-					else if (prevNode->data->column[BASE_ADDRESS] + prevNode->data->column[SIZE] + size == iterator->data->column[BASE_ADDRESS])
-					{
-						prevNode->data->column[SIZE] += size + iterator->data->column[SIZE];
-						prevNode->next = iterator->next;
-						DeleteBlock(iterator);
-						SetLargestBlock();
-						return;
-					}
-					// or if the new space block can only merge with the previous block
-					else if (prevNode->data->column[BASE_ADDRESS] + prevNode->data->column[SIZE] == baseAddress)
-					{
-						prevNode->data->column[SIZE] += size;
-						SetLargestBlock();
-						return;
-					}
-					// or if the block can merge simply insert the block in between
-					else
-					{
-						Node<SpaceBlock>* newBlock = new Node<SpaceBlock>(SpaceBlock(size, baseAddress));
-						prevNode->next = newBlock;
-						iterator->prev = newBlock;
-						newBlock->prev = prevNode;
-						newBlock->next = iterator;
-						SetLargestBlock();
-						return;
-					}
+					memTable->push_back(SpaceBlock(size, baseAddress));
+					SetLargestBlock();
 				}
 			}
-			// otherwise there is no other blocks to merge with, this new block belongs towards the end
-			Node<SpaceBlock>* newBlock = new Node<SpaceBlock>(SpaceBlock(size, baseAddress));
-			prevNode = newBlock;
-			newBlock->prev = prevNode;
-			SetLargestBlock();
+			else
+			{
+				// if the block is somewhere at the middle and can merge with the previous and next blocks
+				if (prevBlock->fsp[BASE_ADDRESS] + prevBlock->fsp[SIZE] + size == iterator->fsp[BASE_ADDRESS])
+				{
+					prevBlock->fsp[SIZE] += size + iterator->fsp[SIZE];
+					memTable->erase(iterator);
+					SetLargestBlock();
+				}
+				// if the new block can only merge with the previous block
+				else if (prevBlock->fsp[BASE_ADDRESS] + prevBlock->fsp[SIZE] == baseAddress)
+				{
+					prevBlock->fsp[SIZE] += size;
+					SetLargestBlock();
+				}
+				// if the new block can only merge with the next block
+				else if (baseAddress + size == iterator->fsp[BASE_ADDRESS])
+				{
+					iterator->fsp[BASE_ADDRESS] -= size;
+					iterator->fsp[SIZE] += size;
+					SetLargestBlock();
+				}
+				// otherwise, it cant merge so insert it in between
+				else
+				{
+					memTable->insert(iterator, SpaceBlock(size, baseAddress));
+					SetLargestBlock();
+				}
+			}
 		}
 	}
 
-	// goes through the each block of free space memory and print its base address and size
+	// prints the memory blocks sequentially in order
 	void PrintMemoryBlocks()
 	{
-		Node<SpaceBlock>* iterator = front;
-		while (iterator != NULL)
+		list<SpaceBlock>::iterator iterator = memTable->begin();
+		while (iterator != memTable->end())
 		{
-			printf("Address: %i\n", iterator->data->column[BASE_ADDRESS]);
-			printf("Size: %i\n", iterator->data->column[SIZE]);
-			iterator = iterator->next;
+			printf("Address: %i\n", iterator->fsp[BASE_ADDRESS]);
+			printf("Size: %i\n", iterator->fsp[SIZE]);
+			advance(iterator, 1);
 		}
+		printf("\n");
 	}
 };

@@ -5,9 +5,10 @@ void offtrace();
 
 void startup()
 {
-	ontrace();
-	debug = true;
-
+	system("cls");
+	//ontrace();
+	
+	debug = false;
 	initVariables();
 }
 
@@ -54,14 +55,14 @@ void Drmint(int &a, int p[])
 
 void Tro(int &a, int p[])
 {
-//	verbose("arrived Tro", a, p);
+	verbose("arrived Tro", a, p);
 
 	list<Job>::iterator jobPointer = searchJob(jobInCpu);
 	jobPointer->j[jx::JOB_TIME_USED] += TIME_QUANTUM;
 
-	printf("CPU Time Used: %i\n", jobPointer->j[jx::JOB_TIME_USED]);
-	printf("Allowed CPU Time: %i\n", jobPointer->j[jx::JOB_TIME_ALLOW]);
-	
+	//printf("CPU Time Used: %i\n", jobPointer->j[jx::JOB_TIME_USED]);
+	//printf("Allowed CPU Time: %i\n", jobPointer->j[jx::JOB_TIME_ALLOW]);
+
 	// if the job exceeds the maximum allowed time, terminate it
 	if (jobPointer->j[jx::JOB_TIME_USED] == jobPointer->j[jx::JOB_TIME_ALLOW])
 	{
@@ -69,7 +70,7 @@ void Tro(int &a, int p[])
 		Svc(a, p);
 	}
 
-//---------- put short-term scheduling algorithm here ---------
+	//---------- put short-term scheduling algorithm here ---------
 	else
 	{
 		readyQueue->push_front(jobInCpu);
@@ -78,7 +79,7 @@ void Tro(int &a, int p[])
 
 	runCpu(a, p);
 
-//	verbose("leaving Tro", a, p);
+	verbose("leaving Tro", a, p);
 }
 
 void Svc(int &a, int p[])
@@ -87,34 +88,31 @@ void Svc(int &a, int p[])
 
 	int jobReqSvc = jobInCpu;
 	list<Job>::iterator jobPointer = searchJob(jobReqSvc);
+	list<int>::iterator jobInDiskQueue = searchQueue(jobReqSvc, diskQueue);
 
 	saveCurrentJob();
-	
+
 	switch (a)
 	{
 	// if a job request termination
 	case REQ_TERM:
-		// if the job is in the termination queue
-		if (terminationQueue->size() > 0)
+		// if the job has pending i/o
+		if ((jobReqSvc==jobInDisk) || (jobInDiskQueue!=diskQueue->end()))
 		{
-			list<int>::iterator jobTermPtr = searchQueue(jobReqSvc, terminationQueue);
-			if (jobTermPtr != terminationQueue->end())
-			{
-				terminationQueue->erase(jobTermPtr);
-				MemMgr.ReturnMemory(jobPointer->j[jx::JOB_MEM_ADDR], jobPointer->j[jx::JOB_SIZE]);
-				jobTable->erase(searchJob(jobReqSvc));
-			}
+			jobWaitTerm = jobReqSvc;
 		}
-		// make sure that the job is not doing io
-		else if (jobInDisk != jobReqSvc)
+		// or if the job held off termination due to io
+		else if (jobReqSvc == jobWaitTerm)
 		{
+			jobWaitTerm = UNDEFINED;
 			MemMgr.ReturnMemory(jobPointer->j[jx::JOB_MEM_ADDR], jobPointer->j[jx::JOB_SIZE]);
 			jobTable->erase(searchJob(jobReqSvc));
 		}
-		// if it is doing io put it in the termination queue
+		// otherwise can terminate
 		else
 		{
-			terminationQueue->push_back(jobReqSvc);
+			MemMgr.ReturnMemory(jobPointer->j[jx::JOB_MEM_ADDR], jobPointer->j[jx::JOB_SIZE]);
+			jobTable->erase(searchJob(jobReqSvc));
 		}
 		readyQueue->erase(searchQueue(jobReqSvc, readyQueue));
 
@@ -129,18 +127,11 @@ void Svc(int &a, int p[])
 
 	// if a job requests blocking
 	case REQ_BLOCK:
-		if (p[px::JOB_TIME_CURR] == 61893)
-			printf("");
-
-		// move the job to the waiting queue
-		waitingQueue->push_back(jobReqSvc);
-		readyQueue->erase(searchQueue(jobReqSvc, readyQueue));
-
-		// if the job is not doing io, schedule it to drum
-		if (jobInDisk != jobReqSvc)
+		// if the job disk i/o is not finished, block the job
+		if ((jobReqSvc == jobInDisk) || (jobInDiskQueue != diskQueue->end()))
 		{
-			readyQueue->push_back(jobReqSvc);
-			waitingQueue->erase(searchQueue(jobReqSvc, waitingQueue));
+			waitingQueue->push_back(jobReqSvc);
+			readyQueue->erase(searchQueue(jobReqSvc, readyQueue));
 		}
 
 		break;
@@ -164,8 +155,7 @@ void Dskint(int &a, int p[])
 		waitingQueue->erase(jobWaitPtr);
 	}
 
-	list<int>::iterator jobTermPtr = searchQueue(jobInDisk, terminationQueue);
-	if (jobTermPtr != terminationQueue->end())
+	if (jobInDisk == jobWaitTerm)
 	{
 		jobInCpu = jobInDisk;
 		jobInDisk = UNDEFINED;
