@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Job\Job.h" />
+    <ClInclude Include="MemMgr\WorstFit.h" />
     <ClInclude Include="Shared\Constants.h" />
     <ClInclude Include="Shared\Functions.h" />
     <ClInclude Include="Shared\Variables.h" />

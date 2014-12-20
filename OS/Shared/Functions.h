@@ -29,6 +29,6 @@ void quickPrint(int value);
 // things that might go away
 list<Job>::iterator searchJob(int jobNumber);
 list<int>::iterator searchQueue(int jobNumber, list<int> *queueObject);
-void printQueue(list<int> *queueObject);
+void printQueueElements(list<int> *queueObject);
 void printQueueContents(list<int> *queueObject);
 void sortedInsert(int jobNumber, list<int> *queueObject, int sortBy);

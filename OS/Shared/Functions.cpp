@@ -46,6 +46,8 @@ void runDrum()
 			{
 				while (jobDrumPtr!=drumQueue->end())
 				{
+
+
 					jobPointer->j[jx::JOB_MEM_ADDR] = MemMgr.RequestMemory(jobPointer->j[jx::JOB_SIZE]);
 					if (jobPointer->j[jx::JOB_MEM_ADDR] != INSUFFICENT_MEM)
 					{
@@ -184,7 +186,7 @@ list<int>::iterator searchQueue(int jobNumber, list<int> *queueObject)
 }
 
 // prints the items of any given list
-void printQueue(list<int> *queueObject)
+void printQueueElements(list<int> *queueObject)
 {
 	list<int>::iterator searchIterator = queueObject->begin();
 	while (searchIterator != queueObject->end())

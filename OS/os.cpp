@@ -137,7 +137,6 @@ void Svc(int &a, int p[])
 			waitingQueue->push_back(jobReqSvc);
 			readyQueue->erase(searchQueue(jobReqSvc, readyQueue));
 		}
-
 		break;
 	}
 
@@ -155,7 +154,7 @@ void Dskint(int &a, int p[])
 	list<int>::iterator jobWaitPtr = searchQueue(jobInDisk, waitingQueue);
 	if (jobWaitPtr != waitingQueue->end())
 	{
-		readyQueue->push_back(*jobWaitPtr);
+		setupCpu(*jobWaitPtr);
 		waitingQueue->erase(jobWaitPtr);
 	}
 

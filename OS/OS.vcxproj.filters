@@ -21,6 +21,9 @@
     <ClInclude Include="Job\Job.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MemMgr\WorstFit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Shared\Constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>

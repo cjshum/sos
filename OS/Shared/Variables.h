@@ -1,7 +1,7 @@
 #pragma once
 #include "..\Job\Job.h"
 #include "Constants.h"
-#include "..\MemMgr\WorstFit.cpp" // change when fixed
+#include "..\MemMgr\WorstFit.h" // change when fixed
 #include <list>
 using namespace std;
 
