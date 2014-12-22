@@ -1,6 +1,5 @@
 #include "Variables.h"
 
-bool debug; // do we need this?
 WorstFit MemMgr;
 list<Job> *jobTable;
 list<int> *drumQueue;
@@ -13,3 +12,5 @@ int jobInDrum;
 int jobInCpu;
 int jobInDisk;
 int jobWaitTerm;
+int swapAfterIO;
+bool debug;

@@ -1,0 +1,2422 @@
+
+
+                            OPERATING SYSTEM SIMULATION
+
+
+
+ *** Clock :  314   job   1  terminated  normally (terminate svc issued) 
+   response time : 314  CPU Time : 21   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   4621    job    2 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 2000    # I/O operations completed: 2 
+ # I/O operations pending :   0 
+
+ *** Clock :  6265   job   3  terminated  abnormally (max cpu time exceeded) 
+   response time : 365  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ *** Clock :  7496   job   5  terminated  normally (terminate svc issued) 
+   response time : 166  CPU Time : 11   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  7652   job   7  terminated  normally (terminate svc issued) 
+   response time : 293  CPU Time : 90   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  10319   job   8  terminated  normally (terminate svc issued) 
+   response time : 110  CPU Time : 9   # I/O operations completed:  1
+    # I/O operations pending :  0 
+
+
+ Clock :   10925    job    4 terminated  abnormally (max cpu time exceeded)            
+ dilation :     1.0  CPU time : 3500    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+ *** Clock :  13076   job   9  terminated  normally (terminate svc issued) 
+   response time : 127  CPU Time : 100   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  17052   job   10  terminated  normally (terminate svc issued) 
+   response time : 103  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  19898   job   11  terminated  abnormally (max cpu time exceeded) 
+   response time : 149  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ Clock :   22870    job    12 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 500    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ Clock :   26968    job    13 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 1300    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  27142   job   16  terminated  normally (terminate svc issued) 
+   response time : 53  CPU Time : 15   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  27385   job   14  terminated  normally (terminate svc issued) 
+   response time : 336  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   28351    job    17 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 1200    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  30323   job   18  terminated  normally (terminate svc issued) 
+   response time : 365  CPU Time : 13   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  33381   job   19  terminated  normally (terminate svc issued) 
+   response time : 683  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   36839    job    20 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 130    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ Clock :   39665    job    21 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 150    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ *** Clock :  45451   job   23  terminated  abnormally (max cpu time exceeded) 
+   response time : 53  CPU Time : 32   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  46835   job   24  terminated  abnormally (max cpu time exceeded) 
+   response time : 37  CPU Time : 18   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  46942   job   26  terminated  normally (terminate svc issued) 
+   response time : 104  CPU Time : 60   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  47244   job   27  terminated  normally (terminate svc issued) 
+   response time : 387  CPU Time : 14   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   48157    job    22 terminated  normally (terminate svc issued)            
+ dilation :     6.0  CPU time : 900    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ Clock :   50657    job    25 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 2500    # I/O operations completed: 2 
+ # I/O operations pending :   0 
+
+ *** Clock :  52479   job   29  terminated  abnormally (max cpu time exceeded) 
+   response time : 32  CPU Time : 15   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ Clock :   53672    job    28 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 3000    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+
+
+ * * * SYSTEM STATUS AT  60103  
+ =====================================
+
+ CPU : job #  30  running 
+ Disk : idle
+ Drum : idle 
+Memory :  77  K words in use
+Average dilation :  1.50    
+Average Response time :   216.29  
+
+
+                                CORE MAP
+
+ Partition   Job   Partition   Job   Partition   JobPartition   Job
+
+     0        0        25       6        50       6        75     30
+     1        0        26       6        51       6        76     30
+     2        0        27       6        52       6        77     30
+     3        0        28       6        53       6        78     30
+     4        0        29       6        54       6        79     30
+     5       15        30       6        55       6        80     30
+     6       15        31       6        56       6        81     30
+     7       15        32       6        57       6        82     30
+     8       15        33       6        58       6        83     30
+     9       15        34       6        59       6        84     30
+    10       15        35       6        60       6        85     30
+    11       15        36       6        61       6        86     30
+    12       15        37       6        62       6        87      0
+    13       15        38       6        63       6        88      0
+    14       15        39       6        64       6        89      0
+    15       15        40       6        65       6        90      0
+    16       15        41       6        66       6        91      0
+    17       15        42       6        67       6        92      0
+    18       15        43       6        68       6        93      0
+    19       15        44       6        69       6        94      0
+    20        0        45       6        70       6        95      0
+    21        0        46       6        71       6        96      0
+    22        0        47       6        72      30        97      0
+    23        0        48       6        73      30        98      0
+    24        0        49       6        74      30        99      0
+
+
+
+                            JOBTABLE 
+
+Job#  Size  Time CPUTime MaxCPU  I/O's Priority Blocked  Latched InCore Term
+          Arrived  Used  Time   Pending 
+
+
+ 30   15  56447    3635   14000    0      1        no      no     yes     no
+ 15   15  27079    1116   40000    0      2        no      no     yes     no
+  6   47   7340   34098   65000    0      5        no      no     yes     no
+ 31   18  59247       0      23    0      2        no      no      no     no
+
+
+
+
+
+
+ Total jobs :  31       terminated : 27
+ % utilization CPU : 90.68   disk :  43.17  drum : 1.06 memory  : 47.74 
+
+
+
+
+ Clock :   60468    job    30 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 4000    # I/O operations completed: 4 
+ # I/O operations pending :   0 
+
+ *** Clock :  60508   job   31  terminated  normally (terminate svc issued) 
+   response time : 1261  CPU Time : 21   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ Clock :   63862    job    32 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 2000    # I/O operations completed: 2 
+ # I/O operations pending :   0 
+
+ *** Clock :  65769   job   33  terminated  abnormally (max cpu time exceeded) 
+   response time : 622  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ *** Clock :  66659   job   35  terminated  normally (terminate svc issued) 
+   response time : 82  CPU Time : 11   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  68256   job   37  terminated  normally (terminate svc issued) 
+   response time : 1650  CPU Time : 90   # I/O operations completed:  14
+    # I/O operations pending :  1 
+
+
+ *** Clock :  69482   job   38  terminated  normally (terminate svc issued) 
+   response time : 26  CPU Time : 9   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ Clock :   70182    job    34 terminated  abnormally (max cpu time exceeded)            
+ dilation :     1.0  CPU time : 3500    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+ *** Clock :  72317   job   39  terminated  normally (terminate svc issued) 
+   response time : 121  CPU Time : 100   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  76417   job   40  terminated  normally (terminate svc issued) 
+   response time : 221  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  79199   job   41  terminated  abnormally (max cpu time exceeded) 
+   response time : 203  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ Clock :   82119    job    42 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 500    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ Clock :   83505    job    6 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 50000    # I/O operations completed: 50 
+ # I/O operations pending :   0 
+
+ Clock :   86209    job    43 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 1300    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  86379   job   46  terminated  normally (terminate svc issued) 
+   response time : 43  CPU Time : 15   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  86818   job   44  terminated  normally (terminate svc issued) 
+   response time : 522  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   89545    job    45 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 3000    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+ *** Clock :  90216   job   48  terminated  normally (terminate svc issued) 
+   response time : 1011  CPU Time : 13   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  92882   job   49  terminated  normally (terminate svc issued) 
+   response time : 937  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   96090    job    50 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 130    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ Clock :   98918    job    51 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 150    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ *** Clock :  106346   job   54  terminated  abnormally (max cpu time exceeded) 
+   response time : 301  CPU Time : 18   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  106348   job   53  terminated  abnormally (max cpu time exceeded) 
+   response time : 1703  CPU Time : 32   # I/O operations completed:  5
+    # I/O operations pending :  0 
+
+
+ *** Clock :  106417   job   56  terminated  normally (terminate svc issued) 
+   response time : 332  CPU Time : 60   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  106736   job   57  terminated  normally (terminate svc issued) 
+   response time : 632  CPU Time : 14   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   107342    job    52 terminated  normally (terminate svc issued)            
+ dilation :     6.0  CPU time : 900    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ Clock :   109986    job    55 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 2500    # I/O operations completed: 2 
+ # I/O operations pending :   0 
+
+ *** Clock :  112138   job   59  terminated  abnormally (max cpu time exceeded) 
+   response time : 444  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   113163    job    58 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 3000    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+ Clock :   119935    job    60 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 4000    # I/O operations completed: 4 
+ # I/O operations pending :   0 
+
+
+
+ * * * SYSTEM STATUS AT  120160  
+ =====================================
+
+ CPU : job #  47  running 
+ Disk running for job  15   since   120160   
+ Drum : idle 
+Memory :  72  K words in use
+Average dilation :  1.43    
+Average Response time :   405.53  
+
+
+                                CORE MAP
+
+ Partition   Job   Partition   Job   Partition   JobPartition   Job
+
+     0        0        25       0        50      36        75     36
+     1        0        26       0        51      36        76     36
+     2        0        27       0        52      36        77     36
+     3        0        28       0        53      36        78     36
+     4        0        29       0        54      36        79     36
+     5       15        30       0        55      36        80     36
+     6       15        31       0        56      36        81     36
+     7       15        32       0        57      36        82     36
+     8       15        33       0        58      36        83     36
+     9       15        34       0        59      36        84      0
+    10       15        35       0        60      36        85      0
+    11       15        36       0        61      36        86      0
+    12       15        37      36        62      36        87     47
+    13       15        38      36        63      36        88     47
+    14       15        39      36        64      36        89     47
+    15       15        40      36        65      36        90     47
+    16       15        41      36        66      36        91     47
+    17       15        42      36        67      36        92     47
+    18       15        43      36        68      36        93     47
+    19       15        44      36        69      36        94     47
+    20        0        45      36        70      36        95     47
+    21        0        46      36        71      36        96     47
+    22        0        47      36        72      36        97      0
+    23        0        48      36        73      36        98      0
+    24        0        49      36        74      36        99      0
+
+
+
+                            JOBTABLE 
+
+Job#  Size  Time CPUTime MaxCPU  I/O's Priority Blocked  Latched InCore Term
+          Arrived  Used  Time   Pending 
+
+
+ 15   15  27079    2658   40000    1      2       yes     yes     yes     no
+ 61   18 118494       0      23    0      2        no      no      no     no
+ 36   47  66587   19574   65000    1      5        no      no     yes     no
+ 47   10  86355    1110    1300    0      2        no      no     yes     no
+
+
+
+
+
+
+ Total jobs :  61       terminated : 57
+ % utilization CPU : 95.25   disk :  65.90  drum : 1.10 memory  : 62.69 
+
+
+
+
+ Clock :   123261    job    47 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 1200    # I/O operations completed: 199 
+ # I/O operations pending :   1 
+
+ *** Clock :  124427   job   63  terminated  abnormally (max cpu time exceeded) 
+   response time : 33  CPU Time : 20   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  125968   job   67  terminated  normally (terminate svc issued) 
+   response time : 115  CPU Time : 90   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  126114   job   65  terminated  normally (terminate svc issued) 
+   response time : 290  CPU Time : 11   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  126505   job   61  terminated  normally (terminate svc issued) 
+   response time : 8011  CPU Time : 21   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   128009    job    62 terminated  normally (terminate svc issued)            
+ dilation :     3.0  CPU time : 2000    # I/O operations completed: 2 
+ # I/O operations pending :   0 
+
+ *** Clock :  129160   job   68  terminated  normally (terminate svc issued) 
+   response time : 457  CPU Time : 9   # I/O operations completed:  1
+    # I/O operations pending :  0 
+
+
+ *** Clock :  131568   job   69  terminated  normally (terminate svc issued) 
+   response time : 125  CPU Time : 100   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ Clock :   132543    job    15 terminated  normally (terminate svc issued)            
+ dilation :     2.0  CPU time : 3000    # I/O operations completed: 499 
+ # I/O operations pending :   1 
+
+ *** Clock :  135601   job   70  terminated  normally (terminate svc issued) 
+   response time : 158  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  138468   job   71  terminated  abnormally (max cpu time exceeded) 
+   response time : 225  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ Clock :   141370    job    72 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 500    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ Clock :   145454    job    73 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 1300    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  146263   job   74  terminated  normally (terminate svc issued) 
+   response time : 720  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  146463   job   76  terminated  normally (terminate svc issued) 
+   response time : 880  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  152121   job   78  terminated  normally (terminate svc issued) 
+   response time : 3669  CPU Time : 13   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  152537   job   79  terminated  normally (terminate svc issued) 
+   response time : 1345  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   157855    job    36 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 50000    # I/O operations completed: 50 
+ # I/O operations pending :   0 
+
+ Clock :   158012    job    80 terminated  normally (terminate svc issued)            
+ dilation :    21.0  CPU time : 130    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ Clock :   158162    job    81 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 150    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ *** Clock :  166462   job   87  terminated  normally (terminate svc issued) 
+   response time : 1111  CPU Time : 14   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  166541   job   84  terminated  abnormally (max cpu time exceeded) 
+   response time : 1249  CPU Time : 18   # I/O operations completed:  2
+    # I/O operations pending :  1 
+
+
+ *** Clock :  168367   job   83  terminated  abnormally (max cpu time exceeded) 
+   response time : 4475  CPU Time : 32   # I/O operations completed:  5
+    # I/O operations pending :  0 
+
+
+ *** Clock :  170656   job   86  terminated  normally (terminate svc issued) 
+   response time : 5324  CPU Time : 60   # I/O operations completed:  9
+    # I/O operations pending :  1 
+
+
+ *** Clock :  171371   job   89  terminated  abnormally (max cpu time exceeded) 
+   response time : 430  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   171768    job    82 terminated  normally (terminate svc issued)            
+ dilation :    12.0  CPU time : 900    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ Clock :   174974    job    88 terminated  normally (terminate svc issued)            
+ dilation :     2.0  CPU time : 3000    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+ Clock :   179202    job    90 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 4000    # I/O operations completed: 4 
+ # I/O operations pending :   0 
+
+
+
+ * * * SYSTEM STATUS AT  180296  
+ =====================================
+
+ CPU : job #  77  running 
+ Disk running for job  64   since   180296   
+ Drum : idle 
+Memory :  70  K words in use
+Average dilation :  2.32    
+Average Response time :   831.47  
+
+
+                                CORE MAP
+
+ Partition   Job   Partition   Job   Partition   JobPartition   Job
+
+     0        0        25       0        50      85        75     91
+     1        0        26      77        51      85        76     91
+     2        0        27      77        52      85        77     91
+     3        0        28      77        53      85        78     91
+     4        0        29      77        54      85        79     91
+     5       75        30      77        55      85        80     91
+     6       75        31      77        56      85        81     91
+     7       75        32      77        57      85        82     91
+     8       75        33      77        58      85        83      0
+     9       75        34      77        59      85        84      0
+    10       75        35      77        60      85        85      0
+    11       75        36       0        61      85        86      0
+    12       75        37       0        62      85        87      0
+    13       75        38      64        63      85        88      0
+    14       75        39      64        64      85        89      0
+    15       75        40      64        65      91        90      0
+    16       75        41      64        66      91        91      0
+    17       75        42      64        67      91        92      0
+    18       75        43      64        68      91        93      0
+    19       75        44      64        69      91        94      0
+    20        0        45      64        70      91        95      0
+    21        0        46      64        71      91        96      0
+    22        0        47      64        72      91        97      0
+    23        0        48      85        73      91        98      0
+    24        0        49      85        74      91        99      0
+
+
+
+                            JOBTABLE 
+
+Job#  Size  Time CPUTime MaxCPU  I/O's Priority Blocked  Latched InCore Term
+          Arrived  Used  Time   Pending 
+
+
+ 75   15 145573     444   40000    1      2       yes      no     yes     no
+ 91   18 177741      18      23    1      2       yes      no     yes     no
+ 64   10 125794    1260    3500    1      1       yes     yes     yes     no
+ 77   10 145602     570    1300    0      2        no      no     yes     no
+ 66   47 125834    6889   65000    0      5        no      no      no     no
+ 85   17 165322     150    5300    1      2       yes      no     yes     no
+
+
+
+
+
+
+ Total jobs :  91       terminated : 85
+ % utilization CPU : 92.68   disk :  75.33  drum : 1.13 memory  : 64.67 
+
+
+
+
+ *** Clock :  180679   job   91  terminated  normally (terminate svc issued) 
+   response time : 2938  CPU Time : 21   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   182788    job    92 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 2000    # I/O operations completed: 2 
+ # I/O operations pending :   0 
+
+ *** Clock :  185124   job   93  terminated  abnormally (max cpu time exceeded) 
+   response time : 1483  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ *** Clock :  188190   job   98  terminated  normally (terminate svc issued) 
+   response time : 240  CPU Time : 9   # I/O operations completed:  1
+    # I/O operations pending :  0 
+
+
+ Clock :   188755    job    94 terminated  abnormally (max cpu time exceeded)            
+ dilation :     1.0  CPU time : 3500    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+ *** Clock :  189192   job   95  terminated  normally (terminate svc issued) 
+   response time : 4121  CPU Time : 11   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  196473   job   97  terminated  normally (terminate svc issued) 
+   response time : 11373  CPU Time : 90   # I/O operations completed:  14
+    # I/O operations pending :  1 
+
+
+ *** Clock :  197126   job   100  terminated  normally (terminate svc issued) 
+   response time : 2436  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  197443   job   99  terminated  normally (terminate svc issued) 
+   response time : 6753  CPU Time : 100   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  197886   job   101  terminated  abnormally (max cpu time exceeded) 
+   response time : 396  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ Clock :   200611    job    102 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 500    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ Clock :   204763    job    103 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 1300    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  205883   job   104  terminated  normally (terminate svc issued) 
+   response time : 1093  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  205978   job   106  terminated  normally (terminate svc issued) 
+   response time : 1148  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  208881   job   108  terminated  normally (terminate svc issued) 
+   response time : 1182  CPU Time : 13   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   209363    job    105 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 3000    # I/O operations completed: 2 
+ # I/O operations pending :   1 
+
+ *** Clock :  212167   job   109  terminated  normally (terminate svc issued) 
+   response time : 1728  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   214590    job    110 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 130    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ Clock :   217408    job    111 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 150    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ Clock :   219056    job    77 terminated  normally (terminate svc issued)            
+ dilation :     3.0  CPU time : 1200    # I/O operations completed: 199 
+ # I/O operations pending :   1 
+
+ *** Clock :  225696   job   114  terminated  abnormally (max cpu time exceeded) 
+   response time : 1157  CPU Time : 18   # I/O operations completed:  2
+    # I/O operations pending :  1 
+
+
+ *** Clock :  225777   job   113  terminated  abnormally (max cpu time exceeded) 
+   response time : 2638  CPU Time : 32   # I/O operations completed:  5
+    # I/O operations pending :  0 
+
+
+ *** Clock :  231168   job   119  terminated  abnormally (max cpu time exceeded) 
+   response time : 980  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+
+
+ * * * SYSTEM STATUS AT  240296  
+ =====================================
+
+ CPU : idle 
+ Disk running for job  107   since   240290   
+ Drum : idle 
+Memory :  52  K words in use
+Average dilation :  2.12    
+Average Response time :   1243.50  
+
+
+                                CORE MAP
+
+ Partition   Job   Partition   Job   Partition   JobPartition   Job
+
+     0        0        25       0        50      85        75      0
+     1        0        26       0        51      85        76      0
+     2        0        27       0        52      85        77      0
+     3        0        28       0        53      85        78      0
+     4        0        29       0        54      85        79      0
+     5       75        30       0        55      85        80      0
+     6       75        31       0        56      85        81      0
+     7       75        32       0        57      85        82      0
+     8       75        33       0        58      85        83      0
+     9       75        34       0        59      85        84      0
+    10       75        35       0        60      85        85    107
+    11       75        36       0        61      85        86    107
+    12       75        37       0        62      85        87    107
+    13       75        38      64        63      85        88    107
+    14       75        39      64        64      85        89    107
+    15       75        40      64        65       0        90    107
+    16       75        41      64        66       0        91    107
+    17       75        42      64        67       0        92    107
+    18       75        43      64        68       0        93    107
+    19       75        44      64        69       0        94    107
+    20        0        45      64        70       0        95      0
+    21        0        46      64        71       0        96      0
+    22        0        47      64        72       0        97      0
+    23        0        48      85        73       0        98      0
+    24        0        49      85        74       0        99      0
+
+
+
+                            JOBTABLE 
+
+Job#  Size  Time CPUTime MaxCPU  I/O's Priority Blocked  Latched InCore Term
+          Arrived  Used  Time   Pending 
+
+
+112   40 219839       0    1000    0      1        no      no      no     no
+ 75   15 145573    1146   40000    1      2       yes      no     yes     no
+118    5 227448       0    7100    0      1        no      no      no     no
+ 64   10 125794    2046    3500    1      1       yes      no     yes     no
+120   15 234188       0   14000    0      1        no      no      no     no
+115   17 224569       0    5300    0      2        no      no      no     no
+ 66   47 125834    6889   65000    0      5        no      no      no     no
+ 85   17 165322     852    5300    1      2       yes      no     yes     no
+ 96   47 185081       0   65000    0      5        no      no      no     no
+107   10 204849     450    1300    1      2       yes     yes     yes     no
+116   21 224579       0      62    0      1        no      no      no     no
+117   23 224598       0      17    0      2        no      no      no     no
+121   18 236988       0      23    0      2        no      no      no     no
+122   25 239588       0    2500    0      1        no      no      no     no
+
+
+
+
+
+
+ Total jobs :  122       terminated : 108
+ % utilization CPU : 75.46   disk :  81.40  drum : 1.05 memory  : 62.65 
+
+
+
+
+ *** Clock :  243034   job   117  terminated  normally (terminate svc issued) 
+   response time : 18436  CPU Time : 14   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  244357   job   123  terminated  abnormally (max cpu time exceeded) 
+   response time : 1469  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ *** Clock :  244638   job   121  terminated  normally (terminate svc issued) 
+   response time : 7650  CPU Time : 21   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ *** Clock :  244980   job   125  terminated  normally (terminate svc issued) 
+   response time : 662  CPU Time : 11   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  245246   job   116  terminated  normally (terminate svc issued) 
+   response time : 20667  CPU Time : 60   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  247221   job   128  terminated  normally (terminate svc issued) 
+   response time : 24  CPU Time : 9   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  250781   job   127  terminated  normally (terminate svc issued) 
+   response time : 6434  CPU Time : 90   # I/O operations completed:  14
+    # I/O operations pending :  1 
+
+
+ *** Clock :  254294   job   130  terminated  normally (terminate svc issued) 
+   response time : 357  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  257054   job   131  terminated  abnormally (max cpu time exceeded) 
+   response time : 317  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ Clock :   259850    job    132 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 500    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ *** Clock :  264911   job   134  terminated  normally (terminate svc issued) 
+   response time : 874  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  265101   job   136  terminated  normally (terminate svc issued) 
+   response time : 1024  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  267719   job   138  terminated  normally (terminate svc issued) 
+   response time : 773  CPU Time : 13   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  270855   job   139  terminated  normally (terminate svc issued) 
+   response time : 1169  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   273837    job    140 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 130    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ Clock :   276655    job    141 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 150    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ Clock :   282104    job    107 terminated  normally (terminate svc issued)            
+ dilation :     3.0  CPU time : 1200    # I/O operations completed: 199 
+ # I/O operations pending :   1 
+
+ *** Clock :  283109   job   143  terminated  abnormally (max cpu time exceeded) 
+   response time : 723  CPU Time : 32   # I/O operations completed:  5
+    # I/O operations pending :  0 
+
+
+ Clock :   283215    job    142 terminated  normally (terminate svc issued)            
+ dilation :     4.0  CPU time : 900    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  284054   job   144  terminated  abnormally (max cpu time exceeded) 
+   response time : 268  CPU Time : 18   # I/O operations completed:  2
+    # I/O operations pending :  1 
+
+
+ *** Clock :  284470   job   147  terminated  normally (terminate svc issued) 
+   response time : 625  CPU Time : 14   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   285254    job    137 terminated  normally (terminate svc issued)            
+ dilation :    17.0  CPU time : 1200    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  285489   job   146  terminated  normally (terminate svc issued) 
+   response time : 1663  CPU Time : 60   # I/O operations completed:  9
+    # I/O operations pending :  1 
+
+
+ Clock :   285868    job    112 terminated  normally (terminate svc issued)            
+ dilation :    73.0  CPU time : 900    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ Clock :   287168    job    133 terminated  normally (terminate svc issued)            
+ dilation :    18.0  CPU time : 1300    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  287268   job   129  terminated  normally (terminate svc issued) 
+   response time : 37331  CPU Time : 100   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ Clock :   289942    job    145 terminated  normally (terminate svc issued)            
+ dilation :     2.0  CPU time : 2500    # I/O operations completed: 2 
+ # I/O operations pending :   0 
+
+ *** Clock :  290339   job   149  terminated  abnormally (max cpu time exceeded) 
+   response time : 904  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   293676    job    118 terminated  normally (terminate svc issued)            
+ dilation :    22.0  CPU time : 3000    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+ Clock :   296390    job    148 terminated  normally (terminate svc issued)            
+ dilation :     3.0  CPU time : 3000    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+ *** Clock :  298274   job   151  terminated  normally (terminate svc issued) 
+   response time : 2039  CPU Time : 21   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+
+
+ * * * SYSTEM STATUS AT  300336  
+ =====================================
+
+ CPU : job #  115  running 
+ Disk running for job  85   since   300336   
+ Drum : idle 
+Memory :  94  K words in use
+Average dilation :  4.42    
+Average Response time :   2156.74  
+
+
+                                CORE MAP
+
+ Partition   Job   Partition   Job   Partition   JobPartition   Job
+
+     0       85        25     115        50     122        75    124
+     1       85        26     115        51     122        76    124
+     2       85        27     115        52     122        77    124
+     3       85        28     115        53     122        78    124
+     4       85        29     115        54     122        79    124
+     5       85        30     115        55     122        80    124
+     6       85        31     115        56     122        81    124
+     7       85        32     115        57     122        82    124
+     8       85        33     115        58     122        83    150
+     9       85        34       0        59     122        84    150
+    10       85        35       0        60     122        85    150
+    11       85        36       0        61     122        86    150
+    12       85        37       0        62     122        87    150
+    13       85        38      64        63     122        88    150
+    14       85        39      64        64     122        89    150
+    15       85        40      64        65     122        90    150
+    16       85        41      64        66     122        91    150
+    17      115        42      64        67     122        92    150
+    18      115        43      64        68     122        93    150
+    19      115        44      64        69     122        94    150
+    20      115        45      64        70     122        95    150
+    21      115        46      64        71     122        96    150
+    22      115        47      64        72     122        97    150
+    23      115        48     122        73     124        98      0
+    24      115        49     122        74     124        99      0
+
+
+
+                            JOBTABLE 
+
+Job#  Size  Time CPUTime MaxCPU  I/O's Priority Blocked  Latched InCore Term
+          Arrived  Used  Time   Pending 
+
+
+152   25 298835       0    2500    0      1        no      no      no     no
+ 75   15 145573    1896   40000    0      2        no      no      no     no
+ 64   10 125794    2976    3500    1      1       yes      no     yes     no
+120   15 234188       0   14000    0      1        no      no      no     no
+115   17 224569     150    5300    0      2        no      no     yes     no
+ 66   47 125834    6889   65000    0      5        no      no      no     no
+ 85   17 165322    1008    5300    1      2       yes     yes     yes     no
+ 96   47 185081       0   65000    0      5        no      no      no     no
+150   15 293435      24   14000    1      1       yes      no     yes     no
+124   10 244288     156    3500    1      1       yes      no     yes     no
+122   25 239588     138    2500    1      1       yes      no     yes     no
+135   15 264067       0   40000    0      2        no      no      no     no
+126   47 244328       0   65000    0      5        no      no      no     no
+
+
+
+
+
+
+ Total jobs :  152       terminated : 139
+ % utilization CPU : 66.10   disk :  84.46  drum : 1.13 memory  : 62.01 
+
+
+
+
+ *** Clock :  303958   job   153  terminated  abnormally (max cpu time exceeded) 
+   response time : 1823  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ *** Clock :  306959   job   158  terminated  normally (terminate svc issued) 
+   response time : 515  CPU Time : 9   # I/O operations completed:  1
+    # I/O operations pending :  0 
+
+
+ *** Clock :  316620   job   161  terminated  abnormally (max cpu time exceeded) 
+   response time : 636  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  323773   job   166  terminated  normally (terminate svc issued) 
+   response time : 449  CPU Time : 15   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  323865   job   160  terminated  normally (terminate svc issued) 
+   response time : 10681  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  323961   job   155  terminated  normally (terminate svc issued) 
+   response time : 20396  CPU Time : 11   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  324674   job   164  terminated  normally (terminate svc issued) 
+   response time : 1390  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   325437    job    167 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 1200    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ Clock :   326838    job    163 terminated  normally (terminate svc issued)            
+ dilation :     3.0  CPU time : 1300    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  326862   job   168  terminated  normally (terminate svc issued) 
+   response time : 669  CPU Time : 13   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  326952   job   159  terminated  normally (terminate svc issued) 
+   response time : 17768  CPU Time : 100   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  328277   job   157  terminated  normally (terminate svc issued) 
+   response time : 24683  CPU Time : 90   # I/O operations completed:  14
+    # I/O operations pending :  1 
+
+
+ *** Clock :  329863   job   169  terminated  normally (terminate svc issued) 
+   response time : 930  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   330606    job    152 terminated  normally (terminate svc issued)            
+ dilation :    15.0  CPU time : 2000    # I/O operations completed: 2 
+ # I/O operations pending :   0 
+
+ Clock :   333198    job    170 terminated  normally (terminate svc issued)            
+ dilation :     2.0  CPU time : 130    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ Clock :   334467    job    154 terminated  abnormally (max cpu time exceeded)            
+ dilation :     8.0  CPU time : 3500    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+ Clock :   336056    job    171 terminated  normally (terminate svc issued)            
+ dilation :     2.0  CPU time : 150    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ *** Clock :  343091   job   174  terminated  abnormally (max cpu time exceeded) 
+   response time : 58  CPU Time : 18   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  344338   job   173  terminated  abnormally (max cpu time exceeded) 
+   response time : 2705  CPU Time : 32   # I/O operations completed:  5
+    # I/O operations pending :  0 
+
+
+ *** Clock :  344375   job   177  terminated  normally (terminate svc issued) 
+   response time : 1283  CPU Time : 14   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  347622   job   176  terminated  normally (terminate svc issued) 
+   response time : 4549  CPU Time : 60   # I/O operations completed:  9
+    # I/O operations pending :  1 
+
+
+ Clock :   347673    job    64 terminated  abnormally (max cpu time exceeded)            
+ dilation :     3.0  CPU time : 3500    # I/O operations completed: 583 
+ # I/O operations pending :   0 
+
+ *** Clock :  348710   job   179  terminated  abnormally (max cpu time exceeded) 
+   response time : 28  CPU Time : 15   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  355532   job   181  terminated  normally (terminate svc issued) 
+   response time : 50  CPU Time : 21   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ Clock :   357273    job    162 terminated  normally (terminate svc issued)            
+ dilation :     4.0  CPU time : 500    # I/O operations completed: 83 
+ # I/O operations pending :   0 
+
+ Clock :   358200    job    172 terminated  normally (terminate svc issued)            
+ dilation :    22.0  CPU time : 900    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ Clock :   360319    job    182 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 2000    # I/O operations completed: 2 
+ # I/O operations pending :   0 
+
+
+
+ * * * SYSTEM STATUS AT  360340  
+ =====================================
+
+ CPU : job #  115  running 
+ Disk running for job  122   since   360298   
+Drum : swapping job  175 in since   360340  
+Memory :  69  K words in use
+Average dilation :  4.68    
+Average Response time :   2661.10  
+
+
+                                CORE MAP
+
+ Partition   Job   Partition   Job   Partition   JobPartition   Job
+
+     0       85        25     124        50     115        75    122
+     1       85        26     124        51     115        76    122
+     2       85        27     124        52       0        77    122
+     3       85        28     124        53       0        78    122
+     4       85        29     124        54       0        79    122
+     5       85        30     124        55       0        80    122
+     6       85        31     124        56       0        81    122
+     7       85        32     124        57       0        82    122
+     8       85        33     124        58       0        83    122
+     9       85        34     124        59       0        84    122
+    10       85        35     115        60       0        85    122
+    11       85        36     115        61       0        86    122
+    12       85        37     115        62       0        87    122
+    13       85        38     115        63       0        88    122
+    14       85        39     115        64       0        89    122
+    15       85        40     115        65       0        90    122
+    16       85        41     115        66       0        91    122
+    17        0        42     115        67       0        92    122
+    18        0        43     115        68       0        93    122
+    19        0        44     115        69       0        94    122
+    20        0        45     115        70       0        95    122
+    21        0        46     115        71       0        96    122
+    22        0        47     115        72       0        97    122
+    23        0        48     115        73       0        98    122
+    24        0        49     115        74       0        99    122
+
+
+
+                            JOBTABLE 
+
+Job#  Size  Time CPUTime MaxCPU  I/O's Priority Blocked  Latched InCore Term
+          Arrived  Used  Time   Pending 
+
+
+ 75   15 145573    1896   40000    0      2        no      no      no     no
+178    5 345942       0    7100    0      1        no      no      no     no
+180   15 352682       0   14000    0      1        no      no      no     no
+120   15 234188       0   14000    0      1        no      no      no     no
+115   17 224569     171    5300    1      2        no      no     yes     no
+ 66   47 125834    6889   65000    0      5        no      no      no     no
+ 85   17 165322    1632    5300    1      2       yes      no     yes     no
+ 96   47 185081       0   65000    0      5        no      no      no     no
+150   15 293435     291   14000    1      1        no      no      no     no
+124   10 244288     846    3500    1      1       yes      no     yes     no
+175   17 343063       0    5300    0      2        no      no      no     no
+122   25 239588     726    2500    1      1       yes     yes     yes     no
+156   47 303575       0   65000    0      5        no      no      no     no
+135   15 264067       0   40000    0      2        no      no      no     no
+126   47 244328       0   65000    0      5        no      no      no     no
+165   15 323314       0   40000    0      2        no      no      no     no
+
+
+
+
+
+
+ Total jobs :  182       terminated : 166
+ % utilization CPU : 59.22   disk :  86.86  drum : 1.18 memory  : 64.46 
+
+
+
+
+ *** Clock :  362965   job   183  terminated  abnormally (max cpu time exceeded) 
+   response time : 1583  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ *** Clock :  365966   job   188  terminated  normally (terminate svc issued) 
+   response time : 275  CPU Time : 9   # I/O operations completed:  1
+    # I/O operations pending :  0 
+
+
+ Clock :   366480    job    184 terminated  abnormally (max cpu time exceeded)            
+ dilation :     1.0  CPU time : 3500    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+ Clock :   368293    job    178 terminated  normally (terminate svc issued)            
+ dilation :     7.0  CPU time : 3000    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+ *** Clock :  375252   job   191  terminated  abnormally (max cpu time exceeded) 
+   response time : 21  CPU Time : 10   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  382902   job   190  terminated  normally (terminate svc issued) 
+   response time : 10471  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  382968   job   185  terminated  normally (terminate svc issued) 
+   response time : 20156  CPU Time : 11   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  383661   job   194  terminated  normally (terminate svc issued) 
+   response time : 1130  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  383776   job   196  terminated  normally (terminate svc issued) 
+   response time : 1205  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   383796    job    192 terminated  normally (terminate svc issued)            
+ dilation :    11.0  CPU time : 500    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ *** Clock :  386244   job   198  terminated  normally (terminate svc issued) 
+   response time : 804  CPU Time : 13   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  387664   job   187  terminated  normally (terminate svc issued) 
+   response time : 24823  CPU Time : 90   # I/O operations completed:  14
+    # I/O operations pending :  1 
+
+
+ *** Clock :  388965   job   199  terminated  normally (terminate svc issued) 
+   response time : 785  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   389292    job    193 terminated  normally (terminate svc issued)            
+ dilation :     6.0  CPU time : 1300    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  389404   job   189  terminated  normally (terminate svc issued) 
+   response time : 20973  CPU Time : 100   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ Clock :   391054    job    175 terminated  normally (terminate svc issued)            
+ dilation :    19.0  CPU time : 2500    # I/O operations completed: 2 
+ # I/O operations pending :   0 
+
+ Clock :   392471    job    200 terminated  normally (terminate svc issued)            
+ dilation :     2.0  CPU time : 130    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ Clock :   395164    job    201 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 150    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ *** Clock :  402327   job   204  terminated  abnormally (max cpu time exceeded) 
+   response time : 47  CPU Time : 18   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  403397   job   203  terminated  abnormally (max cpu time exceeded) 
+   response time : 2517  CPU Time : 32   # I/O operations completed:  5
+    # I/O operations pending :  0 
+
+
+ *** Clock :  403438   job   207  terminated  normally (terminate svc issued) 
+   response time : 1099  CPU Time : 14   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  407916   job   206  terminated  normally (terminate svc issued) 
+   response time : 5596  CPU Time : 60   # I/O operations completed:  9
+    # I/O operations pending :  1 
+
+
+ *** Clock :  407961   job   209  terminated  abnormally (max cpu time exceeded) 
+   response time : 32  CPU Time : 15   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  416258   job   211  terminated  normally (terminate svc issued) 
+   response time : 1529  CPU Time : 21   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+
+
+ * * * SYSTEM STATUS AT  420395  
+ =====================================
+
+ CPU : job #  85  running 
+ Disk running for job  115   since   420395   
+ Drum : idle 
+Memory :  54  K words in use
+Average dilation :  4.89    
+Average Response time :   3059.49  
+
+
+                                CORE MAP
+
+ Partition   Job   Partition   Job   Partition   JobPartition   Job
+
+     0      115        25     197        50       0        75      0
+     1      115        26     197        51       0        76      0
+     2      115        27     197        52       0        77     85
+     3      115        28     197        53       0        78     85
+     4      115        29       0        54       0        79     85
+     5      115        30       0        55       0        80     85
+     6      115        31       0        56       0        81     85
+     7      115        32       0        57       0        82     85
+     8      115        33       0        58       0        83     85
+     9      115        34       0        59       0        84     85
+    10      115        35       0        60       0        85     85
+    11      115        36     124        61       0        86     85
+    12      115        37     124        62       0        87     85
+    13      115        38     124        63       0        88     85
+    14      115        39     124        64       0        89     85
+    15      115        40     124        65       0        90     85
+    16      115        41     124        66       0        91     85
+    17        0        42     124        67       0        92     85
+    18        0        43     124        68       0        93     85
+    19      197        44     124        69       0        94      0
+    20      197        45     124        70       0        95      0
+    21      197        46       0        71       0        96      0
+    22      197        47       0        72       0        97      0
+    23      197        48       0        73       0        98      0
+    24      197        49       0        74       0        99      0
+
+
+
+                            JOBTABLE 
+
+Job#  Size  Time CPUTime MaxCPU  I/O's Priority Blocked  Latched InCore Term
+          Arrived  Used  Time   Pending 
+
+
+202   40 397580       0    1000    0      1        no      no      no     no
+ 75   15 145573    1896   40000    0      2        no      no      no     no
+208    5 405189       0    7100    0      1        no      no      no     no
+180   15 352682       0   14000    0      1        no      no      no     no
+120   15 234188       0   14000    0      1        no      no      no     no
+115   17 224569     996    5300    1      2       yes     yes     yes     no
+ 66   47 125834    6889   65000    0      5        no      no      no     no
+ 85   17 165322    2070    5300    0      2        no      no     yes     no
+ 96   47 185081       0   65000    0      5        no      no      no     no
+150   15 293435     291   14000    1      1        no      no      no     no
+210   15 411929       0   14000    0      1        no      no      no     no
+124   10 244288    1704    3500    1      1       yes      no     yes     no
+205   17 402310       0    5300    0      2        no      no      no     no
+122   25 239588    1317    2500    1      1        no      no      no     no
+156   47 303575       0   65000    0      5        no      no      no     no
+135   15 264067       0   40000    0      2        no      no      no     no
+126   47 244328       0   65000    0      5        no      no      no     no
+212   25 417329       0    2500    0      1        no      no      no     no
+186   47 362822       0   65000    0      5        no      no      no     no
+165   15 323314       0   40000    0      2        no      no      no     no
+195   15 382561       0   40000    0      2        no      no      no     no
+197   10 382590     540    1300    1      2       yes      no     yes     no
+
+
+
+
+
+
+ Total jobs :  212       terminated : 190
+ % utilization CPU : 54.28   disk :  88.75  drum : 1.20 memory  : 64.04 
+
+
+
+
+ *** Clock :  422122   job   213  terminated  abnormally (max cpu time exceeded) 
+   response time : 1493  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ *** Clock :  422600   job   215  terminated  normally (terminate svc issued) 
+   response time : 541  CPU Time : 11   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  422898   job   217  terminated  normally (terminate svc issued) 
+   response time : 810  CPU Time : 90   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  425398   job   218  terminated  normally (terminate svc issued) 
+   response time : 460  CPU Time : 9   # I/O operations completed:  1
+    # I/O operations pending :  0 
+
+
+ *** Clock :  432259   job   220  terminated  normally (terminate svc issued) 
+   response time : 581  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  434979   job   221  terminated  abnormally (max cpu time exceeded) 
+   response time : 501  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  441850   job   226  terminated  normally (terminate svc issued) 
+   response time : 32  CPU Time : 15   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  442978   job   224  terminated  normally (terminate svc issued) 
+   response time : 1200  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  445911   job   228  terminated  normally (terminate svc issued) 
+   response time : 1224  CPU Time : 13   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  449257   job   229  terminated  normally (terminate svc issued) 
+   response time : 1830  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ *** Clock :  463122   job   233  terminated  abnormally (max cpu time exceeded) 
+   response time : 2995  CPU Time : 32   # I/O operations completed:  5
+    # I/O operations pending :  0 
+
+
+ Clock :   463399    job    230 terminated  normally (terminate svc issued)            
+ dilation :     5.0  CPU time : 130    # I/O operations completed: 21 
+ # I/O operations pending :   1 
+
+ *** Clock :  464502   job   237  terminated  normally (terminate svc issued) 
+   response time : 2916  CPU Time : 14   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  464601   job   234  terminated  abnormally (max cpu time exceeded) 
+   response time : 3074  CPU Time : 18   # I/O operations completed:  2
+    # I/O operations pending :  1 
+
+
+ Clock :   467506    job    231 terminated  normally (terminate svc issued)            
+ dilation :     5.0  CPU time : 150    # I/O operations completed: 24 
+ # I/O operations pending :   1 
+
+ *** Clock :  468313   job   239  terminated  abnormally (max cpu time exceeded) 
+   response time : 1137  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  469126   job   236  terminated  normally (terminate svc issued) 
+   response time : 7559  CPU Time : 60   # I/O operations completed:  9
+    # I/O operations pending :  1 
+
+
+ Clock :   470263    job    232 terminated  normally (terminate svc issued)            
+ dilation :    14.0  CPU time : 900    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ Clock :   471224    job    202 terminated  normally (terminate svc issued)            
+ dilation :    81.0  CPU time : 900    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ Clock :   474940    job    197 terminated  normally (terminate svc issued)            
+ dilation :     4.0  CPU time : 1200    # I/O operations completed: 199 
+ # I/O operations pending :   1 
+
+ *** Clock :  475812   job   241  terminated  normally (terminate svc issued) 
+   response time : 1836  CPU Time : 21   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   480001    job    222 terminated  normally (terminate svc issued)            
+ dilation :     5.0  CPU time : 500    # I/O operations completed: 83 
+ # I/O operations pending :   0 
+
+
+
+ * * * SYSTEM STATUS AT  480419  
+ =====================================
+
+ CPU : job #  227  running 
+ Disk running for job  243   since   480419   
+ Drum : idle 
+Memory :  76  K words in use
+Average dilation :  6.00    
+Average Response time :   2906.82  
+
+
+                                CORE MAP
+
+ Partition   Job   Partition   Job   Partition   JobPartition   Job
+
+     0      223        25       0        50     122        75    227
+     1      223        26       0        51     122        76    227
+     2      223        27       0        52     122        77    227
+     3      223        28       0        53     122        78    227
+     4      223        29       0        54     122        79    227
+     5      223        30       0        55     122        80    227
+     6      223        31       0        56     122        81    243
+     7      223        32       0        57     122        82    243
+     8      223        33       0        58     122        83    243
+     9      223        34       0        59     122        84    243
+    10      223        35       0        60     122        85    243
+    11      223        36     124        61     122        86    243
+    12      223        37     124        62     122        87    243
+    13      223        38     124        63     122        88    243
+    14      223        39     124        64     122        89      0
+    15      223        40     124        65     122        90      0
+    16      223        41     124        66     122        91      0
+    17      223        42     124        67     122        92      0
+    18      223        43     124        68     122        93      0
+    19      223        44     124        69     122        94      0
+    20      223        45     124        70     122        95      0
+    21      223        46     122        71     227        96      0
+    22      223        47     122        72     227        97      0
+    23        0        48     122        73     227        98      0
+    24        0        49     122        74     227        99      0
+
+
+
+                            JOBTABLE 
+
+Job#  Size  Time CPUTime MaxCPU  I/O's Priority Blocked  Latched InCore Term
+          Arrived  Used  Time   Pending 
+
+
+242   25 476576       0    2500    0      1        no      no      no     no
+ 75   15 145573    1896   40000    0      2        no      no      no     no
+208    5 405189       0    7100    0      1        no      no      no     no
+180   15 352682       0   14000    0      1        no      no      no     no
+120   15 234188       0   14000    0      1        no      no      no     no
+115   17 224569    1509    5300    1      2        no      no      no     no
+ 66   47 125834    6889   65000    0      5        no      no      no     no
+ 85   17 165322    2475    5300    1      2        no      no      no     no
+ 96   47 185081       0   65000    0      5        no      no      no     no
+150   15 293435     291   14000    1      1        no      no      no     no
+210   15 411929       0   14000    0      1        no      no      no     no
+124   10 244288    2424    3500    0      1        no      no     yes     no
+205   17 402310       0    5300    0      2        no      no      no     no
+122   25 239588    1434    2500    0      1        no      no     yes     no
+156   47 303575       0   65000    0      5        no      no      no     no
+135   15 264067       0   40000    0      2        no      no      no     no
+126   47 244328       0   65000    0      5        no      no      no     no
+212   25 417329       0    2500    0      1        no      no      no     no
+186   47 362822       0   65000    0      5        no      no      no     no
+219   14 427678       0    1500    0      2        no      no      no     no
+214   10 422029       0    3500    0      1        no      no      no     no
+165   15 323314       0   40000    0      2        no      no      no     no
+195   15 382561       0   40000    0      2        no      no      no     no
+216   47 422069       0   65000    0      5        no      no      no     no
+243    8 479876      12      20    1      2       yes     yes     yes     no
+223   23 440378     395    1400    0      2        no      no     yes     no
+238    5 464436       0    7100    0      1        no      no      no     no
+225   15 441808       0   40000    0      2        no      no      no     no
+240   15 471176       0   14000    0      1        no      no      no     no
+227   10 441837     120    1300    0      2        no      no     yes     no
+235   17 461557       0    5300    0      2        no      no      no     no
+
+
+
+
+
+
+ Total jobs :  243       terminated : 212
+ % utilization CPU : 48.73   disk :  90.15  drum : 1.17 memory  : 65.26 
+
+
+
+
+ *** Clock :  480696   job   243  terminated  abnormally (max cpu time exceeded) 
+   response time : 820  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   481374    job    223 terminated  normally (terminate svc issued)            
+ dilation :    31.0  CPU time : 1300    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  481829   job   245  terminated  normally (terminate svc issued) 
+   response time : 523  CPU Time : 11   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  484712   job   248  terminated  normally (terminate svc issued) 
+   response time : 527  CPU Time : 9   # I/O operations completed:  1
+    # I/O operations pending :  0 
+
+
+ *** Clock :  489020   job   247  terminated  normally (terminate svc issued) 
+   response time : 7685  CPU Time : 90   # I/O operations completed:  14
+    # I/O operations pending :  1 
+
+
+ *** Clock :  489163   job   219  terminated  normally (terminate svc issued) 
+   response time : 61485  CPU Time : 100   # I/O operations completed:  16
+    # I/O operations pending :  1 
+
+
+ *** Clock :  493762   job   251  terminated  abnormally (max cpu time exceeded) 
+   response time : 37  CPU Time : 10   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  495713   job   249  terminated  normally (terminate svc issued) 
+   response time : 8788  CPU Time : 100   # I/O operations completed:  16
+    # I/O operations pending :  1 
+
+
+ *** Clock :  496353   job   250  terminated  normally (terminate svc issued) 
+   response time : 5428  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ Clock :   498668    job    242 terminated  normally (terminate svc issued)            
+ dilation :    11.0  CPU time : 2000    # I/O operations completed: 2 
+ # I/O operations pending :   0 
+
+ *** Clock :  502352   job   254  terminated  normally (terminate svc issued) 
+   response time : 1327  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  502437   job   256  terminated  normally (terminate svc issued) 
+   response time : 1372  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   503716    job    257 terminated  normally (terminate svc issued)            
+ dilation :     2.0  CPU time : 1200    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  505015   job   258  terminated  normally (terminate svc issued) 
+   response time : 1081  CPU Time : 13   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  508436   job   259  terminated  normally (terminate svc issued) 
+   response time : 1762  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   521638    job    260 terminated  normally (terminate svc issued)            
+ dilation :     5.0  CPU time : 130    # I/O operations completed: 21 
+ # I/O operations pending :   1 
+
+ *** Clock :  522161   job   267  terminated  normally (terminate svc issued) 
+   response time : 1328  CPU Time : 14   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  522234   job   266  terminated  normally (terminate svc issued) 
+   response time : 1420  CPU Time : 60   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  522351   job   263  terminated  abnormally (max cpu time exceeded) 
+   response time : 2977  CPU Time : 32   # I/O operations completed:  5
+    # I/O operations pending :  0 
+
+
+ *** Clock :  522955   job   264  terminated  abnormally (max cpu time exceeded) 
+   response time : 2181  CPU Time : 18   # I/O operations completed:  2
+    # I/O operations pending :  1 
+
+
+ Clock :   525640    job    261 terminated  normally (terminate svc issued)            
+ dilation :     5.0  CPU time : 150    # I/O operations completed: 24 
+ # I/O operations pending :   1 
+
+ *** Clock :  527352   job   269  terminated  abnormally (max cpu time exceeded) 
+   response time : 929  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  534637   job   271  terminated  normally (terminate svc issued) 
+   response time : 1414  CPU Time : 21   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   537951    job    122 terminated  normally (terminate svc issued)            
+ dilation :     8.0  CPU time : 2000    # I/O operations completed: 333 
+ # I/O operations pending :   0 
+
+ *** Clock :  540296   job   273  terminated  abnormally (max cpu time exceeded) 
+   response time : 1173  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+
+
+ * * * SYSTEM STATUS AT  540434  
+ =====================================
+
+ CPU : job #  124  running 
+ Disk running for job  227   since   540434   
+ Drum : idle 
+Memory :  39  K words in use
+Average dilation :  6.32    
+Average Response time :   3210.23  
+
+
+                                CORE MAP
+
+ Partition   Job   Partition   Job   Partition   JobPartition   Job
+
+     0      252        25       0        50       0        75    227
+     1      252        26       0        51       0        76    227
+     2      252        27       0        52       0        77    227
+     3      252        28       0        53       0        78    227
+     4      252        29       0        54       0        79    227
+     5      252        30       0        55       0        80    227
+     6      252        31       0        56       0        81      0
+     7      252        32       0        57       0        82      0
+     8      252        33       0        58       0        83      0
+     9      252        34       0        59       0        84      0
+    10      252        35       0        60       0        85      0
+    11      252        36     124        61       0        86      0
+    12      252        37     124        62       0        87      0
+    13      252        38     124        63       0        88      0
+    14      252        39     124        64       0        89      0
+    15      252        40     124        65       0        90      0
+    16      252        41     124        66       0        91      0
+    17      252        42     124        67       0        92      0
+    18      252        43     124        68       0        93      0
+    19        0        44     124        69       0        94      0
+    20        0        45     124        70       0        95      0
+    21        0        46       0        71     227        96      0
+    22        0        47       0        72     227        97      0
+    23        0        48       0        73     227        98      0
+    24        0        49       0        74     227        99      0
+
+
+
+                            JOBTABLE 
+
+Job#  Size  Time CPUTime MaxCPU  I/O's Priority Blocked  Latched InCore Term
+          Arrived  Used  Time   Pending 
+
+
+253   23 499625       0    1400    0      2        no      no      no     no
+ 75   15 145573    1896   40000    0      2        no      no      no     no
+208    5 405189       0    7100    0      1        no      no      no     no
+180   15 352682       0   14000    0      1        no      no      no     no
+120   15 234188       0   14000    0      1        no      no      no     no
+115   17 224569    1509    5300    1      2        no      no      no     no
+ 66   47 125834    6889   65000    0      5        no      no      no     no
+ 85   17 165322    2475    5300    1      2        no      no      no     no
+ 96   47 185081       0   65000    0      5        no      no      no     no
+150   15 293435     291   14000    1      1        no      no      no     no
+210   15 411929       0   14000    0      1        no      no      no     no
+124   10 244288    3150    3500    0      1        no      no     yes     no
+205   17 402310       0    5300    0      2        no      no      no     no
+156   47 303575       0   65000    0      5        no      no      no     no
+135   15 264067       0   40000    0      2        no      no      no     no
+126   47 244328       0   65000    0      5        no      no      no     no
+212   25 417329     243    2500    1      1        no      no      no     no
+186   47 362822       0   65000    0      5        no      no      no     no
+268    5 523683       0    7100    0      1        no      no      no     no
+214   10 422029       0    3500    0      1        no      no      no     no
+244   10 481276       0    3500    0      1        no      no      no     no
+165   15 323314       0   40000    0      2        no      no      no     no
+195   15 382561       0   40000    0      2        no      no      no     no
+216   47 422069       0   65000    0      5        no      no      no     no
+252   19 496325     456     550    1      1       yes      no     yes     no
+255   15 501055       0   40000    0      2        no      no      no     no
+238    5 464436       0    7100    0      1        no      no      no     no
+225   15 441808       0   40000    0      2        no      no      no     no
+240   15 471176       0   14000    0      1        no      no      no     no
+227   10 441837     942    1300    1      2       yes     yes     yes     no
+246   47 481316       0   65000    0      5        no      no      no     no
+270   15 530423       0   14000    0      1        no      no      no     no
+262   40 516074       0    1000    0      1        no      no      no     no
+235   17 461557       0    5300    0      2        no      no      no     no
+272   25 535823       0    2500    0      1        no      no      no     no
+265   17 520804       0    5300    0      2        no      no      no     no
+
+
+
+
+
+
+ Total jobs :  273       terminated : 237
+ % utilization CPU : 44.75   disk :  91.24  drum : 1.15 memory  : 66.50 
+
+
+
+
+ Clock :   542711    job    252 terminated  normally (terminate svc issued)            
+ dilation :     5.0  CPU time : 500    # I/O operations completed: 83 
+ # I/O operations pending :   0 
+
+ *** Clock :  543019   job   275  terminated  normally (terminate svc issued) 
+   response time : 2466  CPU Time : 11   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  543827   job   278  terminated  normally (terminate svc issued) 
+   response time : 395  CPU Time : 9   # I/O operations completed:  1
+    # I/O operations pending :  0 
+
+
+ *** Clock :  547545   job   277  terminated  normally (terminate svc issued) 
+   response time : 6963  CPU Time : 90   # I/O operations completed:  14
+    # I/O operations pending :  1 
+
+
+ *** Clock :  550438   job   280  terminated  normally (terminate svc issued) 
+   response time : 266  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ Clock :   551715    job    227 terminated  normally (terminate svc issued)            
+ dilation :     5.0  CPU time : 1200    # I/O operations completed: 199 
+ # I/O operations pending :   1 
+
+ Clock :   552862    job    262 terminated  normally (terminate svc issued)            
+ dilation :    40.0  CPU time : 900    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  553152   job   281  terminated  abnormally (max cpu time exceeded) 
+   response time : 180  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ Clock :   554172    job    253 terminated  normally (terminate svc issued)            
+ dilation :    41.0  CPU time : 1300    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ Clock :   556301    job    272 terminated  normally (terminate svc issued)            
+ dilation :    10.0  CPU time : 2000    # I/O operations completed: 2 
+ # I/O operations pending :   0 
+
+ Clock :   556824    job    282 terminated  normally (terminate svc issued)            
+ dilation :     2.0  CPU time : 500    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ Clock :   558641    job    85 terminated  normally (terminate svc issued)            
+ dilation :     9.0  CPU time : 2500    # I/O operations completed: 416 
+ # I/O operations pending :   1 
+
+ *** Clock :  559356   job   279  terminated  normally (terminate svc issued) 
+   response time : 13184  CPU Time : 100   # I/O operations completed:  16
+    # I/O operations pending :  1 
+
+
+ *** Clock :  560298   job   284  terminated  normally (terminate svc issued) 
+   response time : 26  CPU Time : 15   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  561450   job   286  terminated  normally (terminate svc issued) 
+   response time : 1138  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   562882    job    214 terminated  abnormally (max cpu time exceeded)            
+ dilation :    40.0  CPU time : 3500    # I/O operations completed: 3 
+ # I/O operations pending :   0 
+
+ *** Clock :  563213   job   288  terminated  normally (terminate svc issued) 
+   response time : 32  CPU Time : 13   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ Clock :   563974    job    124 terminated  abnormally (max cpu time exceeded)            
+ dilation :     5.0  CPU time : 3500    # I/O operations completed: 583 
+ # I/O operations pending :   0 
+
+ *** Clock :  565956   job   289  terminated  normally (terminate svc issued) 
+   response time : 35  CPU Time : 20   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ Clock :   572902    job    291 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 150    # I/O operations completed: 0 
+ # I/O operations pending :   0 
+
+ Clock :   580526    job    290 terminated  normally (terminate svc issued)            
+ dilation :     5.0  CPU time : 130    # I/O operations completed: 21 
+ # I/O operations pending :   1 
+
+ *** Clock :  581449   job   297  terminated  normally (terminate svc issued) 
+   response time : 1369  CPU Time : 14   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  581639   job   293  terminated  abnormally (max cpu time exceeded) 
+   response time : 3018  CPU Time : 32   # I/O operations completed:  5
+    # I/O operations pending :  0 
+
+
+ *** Clock :  581978   job   294  terminated  abnormally (max cpu time exceeded) 
+   response time : 1957  CPU Time : 18   # I/O operations completed:  2
+    # I/O operations pending :  1 
+
+
+ *** Clock :  585358   job   296  terminated  normally (terminate svc issued) 
+   response time : 5297  CPU Time : 60   # I/O operations completed:  9
+    # I/O operations pending :  1 
+
+
+ *** Clock :  586113   job   299  terminated  abnormally (max cpu time exceeded) 
+   response time : 443  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   586458    job    292 terminated  normally (terminate svc issued)            
+ dilation :    12.0  CPU time : 900    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ Clock :   587833    job    283 terminated  normally (terminate svc issued)            
+ dilation :    22.0  CPU time : 1300    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  592836   job   301  terminated  normally (terminate svc issued) 
+   response time : 366  CPU Time : 21   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  600087   job   303  terminated  abnormally (max cpu time exceeded) 
+   response time : 1717  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+
+
+ * * * SYSTEM STATUS AT  600436  
+ =====================================
+
+ CPU : idle 
+ Disk running for job  287   since   600430   
+ Drum : idle 
+Memory :  72  K words in use
+Average dilation :  7.53    
+Average Response time :   3118.82  
+
+
+                                CORE MAP
+
+ Partition   Job   Partition   Job   Partition   JobPartition   Job
+
+     0      244        25     287        50     212        75    274
+     1      244        26     287        51     212        76    274
+     2      244        27     287        52     212        77    274
+     3      244        28     287        53     212        78    274
+     4      244        29     287        54     212        79    274
+     5      244        30     212        55       0        80    274
+     6      244        31     212        56       0        81    115
+     7      244        32     212        57       0        82    115
+     8      244        33     212        58       0        83    115
+     9      244        34     212        59       0        84    115
+    10        0        35     212        60       0        85    115
+    11        0        36     212        61       0        86    115
+    12        0        37     212        62       0        87    115
+    13        0        38     212        63       0        88    115
+    14        0        39     212        64       0        89    115
+    15        0        40     212        65       0        90    115
+    16        0        41     212        66       0        91    115
+    17        0        42     212        67       0        92    115
+    18        0        43     212        68       0        93    115
+    19        0        44     212        69       0        94    115
+    20      287        45     212        70       0        95    115
+    21      287        46     212        71     274        96    115
+    22      287        47     212        72     274        97    115
+    23      287        48     212        73     274        98      0
+    24      287        49     212        74     274        99      0
+
+
+
+                            JOBTABLE 
+
+Job#  Size  Time CPUTime MaxCPU  I/O's Priority Blocked  Latched InCore Term
+          Arrived  Used  Time   Pending 
+
+
+300   15 589670       0   14000    0      1        no      no      no     no
+ 75   15 145573    1896   40000    0      2        no      no      no     no
+208    5 405189       0    7100    0      1        no      no      no     no
+180   15 352682       0   14000    0      1        no      no      no     no
+120   15 234188       0   14000    0      1        no      no      no     no
+115   17 224569    1656    5300    1      2       yes      no     yes     no
+ 66   47 125834    6889   65000    0      5        no      no      no     no
+285   15 560302       0   40000    0      2        no      no      no     no
+ 96   47 185081       0   65000    0      5        no      no      no     no
+150   15 293435     291   14000    1      1        no      no      no     no
+210   15 411929       0   14000    0      1        no      no      no     no
+298    5 582930       0    7100    0      1        no      no      no     no
+205   17 402310       0    5300    0      2        no      no      no     no
+274   10 540523     522    3500    1      1       yes      no     yes     no
+156   47 303575       0   65000    0      5        no      no      no     no
+135   15 264067       0   40000    0      2        no      no      no     no
+126   47 244328       0   65000    0      5        no      no      no     no
+212   25 417329     744    2500    1      1       yes      no     yes     no
+186   47 362822       0   65000    0      5        no      no      no     no
+268    5 523683       0    7100    0      1        no      no      no     no
+302   25 595070       0    2500    0      1        no      no      no     no
+244   10 481276     516    3500    1      1       yes      no     yes     no
+165   15 323314       0   40000    0      2        no      no      no     no
+195   15 382561       0   40000    0      2        no      no      no     no
+216   47 422069       0   65000    0      5        no      no      no     no
+255   15 501055       0   40000    0      2        no      no      no     no
+238    5 464436       0    7100    0      1        no      no      no     no
+225   15 441808       0   40000    0      2        no      no      no     no
+240   15 471176       0   14000    0      1        no      no      no     no
+287   10 560331     534    1300    1      2       yes     yes     yes     no
+246   47 481316       0   65000    0      5        no      no      no     no
+270   15 530423       0   14000    0      1        no      no      no     no
+304   10 599770       0    3500    0      1        no      no      no     no
+235   17 461557       0    5300    0      2        no      no      no     no
+295   17 580051       0    5300    0      2        no      no      no     no
+305   30 599800       0      14    0      2        no      no      no     no
+265   17 520804       0    5300    0      2        no      no      no     no
+276   47 540563       0   65000    0      5        no      no      no     no
+306   47 599810       0   65000    0      5        no      no      no     no
+307   27 599829       0     100    0      1        no      no      no     no
+
+
+
+
+
+
+ Total jobs :  307       terminated : 267
+ % utilization CPU : 42.62   disk :  91.76  drum : 1.17 memory  : 66.17 
+
+
+
+
+ *** Clock :  603298   job   308  terminated  normally (terminate svc issued) 
+   response time : 619  CPU Time : 9   # I/O operations completed:  1
+    # I/O operations pending :  0 
+
+
+ *** Clock :  612250   job   311  terminated  abnormally (max cpu time exceeded) 
+   response time : 31  CPU Time : 10   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  619831   job   310  terminated  normally (terminate svc issued) 
+   response time : 10412  CPU Time : 10   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  620090   job   305  terminated  normally (terminate svc issued) 
+   response time : 20290  CPU Time : 11   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ *** Clock :  621088   job   314  terminated  normally (terminate svc issued) 
+   response time : 1569  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  621153   job   316  terminated  normally (terminate svc issued) 
+   response time : 1594  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   621697    job    317 terminated  normally (terminate svc issued)            
+ dilation :     1.0  CPU time : 1200    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  623571   job   318  terminated  normally (terminate svc issued) 
+   response time : 1143  CPU Time : 13   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ *** Clock :  626962   job   319  terminated  normally (terminate svc issued) 
+   response time : 1794  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ *** Clock :  627681   job   307  terminated  normally (terminate svc issued) 
+   response time : 27852  CPU Time : 90   # I/O operations completed:  14
+    # I/O operations pending :  1 
+
+
+ Clock :   629230    job    313 terminated  normally (terminate svc issued)            
+ dilation :     8.0  CPU time : 1300    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  638489   job   309  terminated  normally (terminate svc issued) 
+   response time : 33070  CPU Time : 100   # I/O operations completed:  16
+    # I/O operations pending :  1 
+
+
+ *** Clock :  641152   job   323  terminated  abnormally (max cpu time exceeded) 
+   response time : 3284  CPU Time : 32   # I/O operations completed:  5
+    # I/O operations pending :  0 
+
+
+ Clock :   641964    job    320 terminated  normally (terminate svc issued)            
+ dilation :     6.0  CPU time : 130    # I/O operations completed: 21 
+ # I/O operations pending :   1 
+
+ *** Clock :  642179   job   327  terminated  normally (terminate svc issued) 
+   response time : 2852  CPU Time : 14   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  643301   job   324  terminated  abnormally (max cpu time exceeded) 
+   response time : 4033  CPU Time : 18   # I/O operations completed:  2
+    # I/O operations pending :  1 
+
+
+ *** Clock :  646088   job   329  terminated  abnormally (max cpu time exceeded) 
+   response time : 1171  CPU Time : 15   # I/O operations completed:  2
+    # I/O operations pending :  0 
+
+
+ Clock :   646776    job    321 terminated  normally (terminate svc issued)            
+ dilation :     6.0  CPU time : 150    # I/O operations completed: 24 
+ # I/O operations pending :   1 
+
+ *** Clock :  647301   job   326  terminated  normally (terminate svc issued) 
+   response time : 7993  CPU Time : 60   # I/O operations completed:  9
+    # I/O operations pending :  1 
+
+
+ *** Clock :  653153   job   331  terminated  normally (terminate svc issued) 
+   response time : 1436  CPU Time : 21   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+ Clock :   656851    job    287 terminated  normally (terminate svc issued)            
+ dilation :     4.0  CPU time : 1200    # I/O operations completed: 199 
+ # I/O operations pending :   1 
+
+ Clock :   658038    job    322 terminated  normally (terminate svc issued)            
+ dilation :    26.0  CPU time : 900    # I/O operations completed: 1 
+ # I/O operations pending :   0 
+
+ *** Clock :  658578   job   333  terminated  abnormally (max cpu time exceeded) 
+   response time : 961  CPU Time : 20   # I/O operations completed:  3
+    # I/O operations pending :  0 
+
+
+
+
+ * * * SYSTEM STATUS AT  660436  
+ =====================================
+
+ CPU : job #  244  running 
+ Disk running for job  212   since   660436   
+ Drum : idle 
+Memory :  89  K words in use
+Average dilation :  7.58    
+Average Response time :   3473.76  
+
+
+                                CORE MAP
+
+ Partition   Job   Partition   Job   Partition   JobPartition   Job
+
+     0      244        25     212        50     332        75    274
+     1      244        26     212        51     332        76    274
+     2      244        27     212        52     332        77    274
+     3      244        28     212        53     332        78    274
+     4      244        29     212        54     332        79    274
+     5      244        30     212        55     332        80    274
+     6      244        31     212        56     332        81    312
+     7      244        32     212        57     332        82    312
+     8      244        33     212        58     332        83    312
+     9      244        34     212        59     332        84    312
+    10      212        35     332        60       0        85    312
+    11      212        36     332        61       0        86    312
+    12      212        37     332        62       0        87    312
+    13      212        38     332        63       0        88    312
+    14      212        39     332        64       0        89    312
+    15      212        40     332        65       0        90    312
+    16      212        41     332        66       0        91    312
+    17      212        42     332        67       0        92    312
+    18      212        43     332        68       0        93    312
+    19      212        44     332        69       0        94    312
+    20      212        45     332        70       0        95    312
+    21      212        46     332        71     274        96    312
+    22      212        47     332        72     274        97    312
+    23      212        48     332        73     274        98    312
+    24      212        49     332        74     274        99    312
+
+
+
+                            JOBTABLE 
+
+Job#  Size  Time CPUTime MaxCPU  I/O's Priority Blocked  Latched InCore Term
+          Arrived  Used  Time   Pending 
+
+
+300   15 589670       0   14000    0      1        no      no      no     no
+ 75   15 145573    1896   40000    0      2        no      no      no     no
+208    5 405189       0    7100    0      1        no      no      no     no
+180   15 352682       0   14000    0      1        no      no      no     no
+120   15 234188       0   14000    0      1        no      no      no     no
+115   17 224569    1887    5300    1      2        no      no      no     no
+ 66   47 125834    6889   65000    0      5        no      no      no     no
+285   15 560302       0   40000    0      2        no      no      no     no
+ 96   47 185081       0   65000    0      5        no      no      no     no
+150   15 293435     291   14000    1      1        no      no      no     no
+210   15 411929       0   14000    0      1        no      no      no     no
+298    5 582930       0    7100    0      1        no      no      no     no
+205   17 402310       0    5300    0      2        no      no      no     no
+274   10 540523    1206    3500    1      1       yes      no     yes     no
+156   47 303575       0   65000    0      5        no      no      no     no
+135   15 264067       0   40000    0      2        no      no      no     no
+126   47 244328       0   65000    0      5        no      no      no     no
+212   25 417329    1002    2500    1      1       yes     yes     yes     no
+186   47 362822       0   65000    0      5        no      no      no     no
+268    5 523683       0    7100    0      1        no      no      no     no
+302   25 595070       0    2500    0      1        no      no      no     no
+244   10 481276    1176    3500    0      1        no      no     yes     no
+165   15 323314       0   40000    0      2        no      no      no     no
+195   15 382561       0   40000    0      2        no      no      no     no
+216   47 422069       0   65000    0      5        no      no      no     no
+330   15 648917       0   14000    0      1        no      no      no     no
+255   15 501055       0   40000    0      2        no      no      no     no
+238    5 464436       0    7100    0      1        no      no      no     no
+225   15 441808       0   40000    0      2        no      no      no     no
+240   15 471176       0   14000    0      1        no      no      no     no
+334   10 659017       0    3500    0      1        no      no      no     no
+246   47 481316       0   65000    0      5        no      no      no     no
+270   15 530423       0   14000    0      1        no      no      no     no
+304   10 599770       0    3500    0      1        no      no      no     no
+235   17 461557       0    5300    0      2        no      no      no     no
+295   17 580051       0    5300    0      2        no      no      no     no
+328    5 642177       0    7100    0      1        no      no      no     no
+265   17 520804       0    5300    0      2        no      no      no     no
+276   47 540563       0   65000    0      5        no      no      no     no
+306   47 599810       0   65000    0      5        no      no      no     no
+332   25 654317      24    2500    1      1       yes      no     yes     no
+335   30 659047       0      14    0      2        no      no      no     no
+312   19 614819     354     550    1      1       yes      no     yes     no
+336   47 659057       0   65000    0      5        no      no      no     no
+325   17 639298       0    5300    0      2        no      no      no     no
+315   15 619549       0   40000    0      2        no      no      no     no
+337   27 659076       0     100    0      1        no      no      no     no
+
+
+
+
+
+
+ Total jobs :  337       terminated : 290
+ % utilization CPU : 39.81   disk :  92.51  drum : 1.16 memory  : 66.47 
+
+
+
+
+ *** Clock :  661950   job   338  terminated  normally (terminate svc issued) 
+   response time : 24  CPU Time : 9   # I/O operations completed:  0
+    # I/O operations pending :  0 
+
+
+ *** Clock :  671970   job   341  terminated  abnormally (max cpu time exceeded) 
+   response time : 504  CPU Time : 10   # I/O operations completed:  1
+    # I/O operations pending :  1 
+
+
+ Clock :   672683    job    312 terminated  normally (terminate svc issued)            
+ dilation :     6.0  CPU time : 500    # I/O operations completed: 83 
+ # I/O operations pending :   0 
+
+
+
+*** Clock :  678766 , ***FATAL ERROR :  4
+
+*** GENCRINT ERROR ** JOB TABLE FULL - OS PROCESSING JOBS TOO SLOWLY***
+
+Current Value of Registers:
+
+         a = 1 
+        p [1..5] =   332   35   25   2209   678687 
+
+
+
+                          FINAL STATISTICS  
+
+
+
+ * * * SYSTEM STATUS AT  678766  
+ =====================================
+
+ CPU : idle 
+ Disk running for job  274   since   678681   
+ Drum : idle 
+Memory :  45  K words in use
+Average dilation :  7.57    
+Average Response time :   3440.15  
+
+
+                                CORE MAP
+
+ Partition   Job   Partition   Job   Partition   JobPartition   Job
+
+     0      244        25       0        50     332        75    274
+     1      244        26       0        51     332        76    274
+     2      244        27       0        52     332        77    274
+     3      244        28       0        53     332        78    274
+     4      244        29       0        54     332        79    274
+     5      244        30       0        55     332        80    274
+     6      244        31       0        56     332        81      0
+     7      244        32       0        57     332        82      0
+     8      244        33       0        58     332        83      0
+     9      244        34       0        59     332        84      0
+    10        0        35     332        60       0        85      0
+    11        0        36     332        61       0        86      0
+    12        0        37     332        62       0        87      0
+    13        0        38     332        63       0        88      0
+    14        0        39     332        64       0        89      0
+    15        0        40     332        65       0        90      0
+    16        0        41     332        66       0        91      0
+    17        0        42     332        67       0        92      0
+    18        0        43     332        68       0        93      0
+    19        0        44     332        69       0        94      0
+    20        0        45     332        70       0        95      0
+    21        0        46     332        71     274        96      0
+    22        0        47     332        72     274        97      0
+    23        0        48     332        73     274        98      0
+    24        0        49     332        74     274        99      0
+
+
+
+                            JOBTABLE 
+
+Job#  Size  Time CPUTime MaxCPU  I/O's Priority Blocked  Latched InCore Term
+          Arrived  Used  Time   Pending 
+
+
+300   15 589670       0   14000    0      1        no      no      no     no
+ 75   15 145573    1896   40000    0      2        no      no      no     no
+208    5 405189       0    7100    0      1        no      no      no     no
+180   15 352682       0   14000    0      1        no      no      no     no
+120   15 234188       0   14000    0      1        no      no      no     no
+115   17 224569    1887    5300    1      2        no      no      no     no
+ 66   47 125834    6889   65000    0      5        no      no      no     no
+285   15 560302       0   40000    0      2        no      no      no     no
+ 96   47 185081       0   65000    0      5        no      no      no     no
+150   15 293435     291   14000    1      1        no      no      no     no
+210   15 411929       0   14000    0      1        no      no      no     no
+298    5 582930       0    7100    0      1        no      no      no     no
+205   17 402310       0    5300    0      2        no      no      no     no
+274   10 540523    1470    3500    1      1       yes     yes     yes     no
+156   47 303575       0   65000    0      5        no      no      no     no
+135   15 264067       0   40000    0      2        no      no      no     no
+126   47 244328       0   65000    0      5        no      no      no     no
+212   25 417329    1137    2500    1      1        no      no      no     no
+186   47 362822       0   65000    0      5        no      no      no     no
+268    5 523683       0    7100    0      1        no      no      no     no
+302   25 595070       0    2500    0      1        no      no      no     no
+244   10 481276    1446    3500    1      1       yes      no     yes     no
+165   15 323314       0   40000    0      2        no      no      no     no
+195   15 382561       0   40000    0      2        no      no      no     no
+216   47 422069       0   65000    0      5        no      no      no     no
+330   15 648917       0   14000    0      1        no      no      no     no
+255   15 501055       0   40000    0      2        no      no      no     no
+238    5 464436       0    7100    0      1        no      no      no     no
+225   15 441808       0   40000    0      2        no      no      no     no
+240   15 471176       0   14000    0      1        no      no      no     no
+334   10 659017       0    3500    0      1        no      no      no     no
+246   47 481316       0   65000    0      5        no      no      no     no
+270   15 530423       0   14000    0      1        no      no      no     no
+304   10 599770       0    3500    0      1        no      no      no     no
+235   17 461557       0    5300    0      2        no      no      no     no
+295   17 580051       0    5300    0      2        no      no      no     no
+328    5 642177       0    7100    0      1        no      no      no     no
+265   17 520804       0    5300    0      2        no      no      no     no
+276   47 540563       0   65000    0      5        no      no      no     no
+306   47 599810       0   65000    0      5        no      no      no     no
+332   25 654317     294    2500    1      1       yes      no     yes     no
+335   30 659047       0      14    0      2        no      no      no     no
+342   19 674066       0     550    0      1        no      no      no     no
+336   47 659057       0   65000    0      5        no      no      no     no
+325   17 639298       0    5300    0      2        no      no      no     no
+315   15 619549       0   40000    0      2        no      no      no     no
+337   27 659076       0     100    0      1        no      no      no     no
+339   14 664666       0    1500    0      2        no      no      no     no
+340   30 668666       0      11    0      1        no      no      no     no
+343   23 677366       0    1400    0      2        no      no      no     no
+
+
+
+
+
+
+ Total jobs :  343       terminated : 293
+ % utilization CPU : 38.90   disk :  92.70  drum : 1.14 memory  : 66.50 
+
+
+

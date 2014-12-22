@@ -18,11 +18,12 @@
     <ClInclude Include="Shared\Variables.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MemMgr\SpaceBlock.cpp" />
+    <ClCompile Include="MemMgr\SpaceBlock.h" />
     <ClCompile Include="MemMgr\WorstFit.cpp" />
     <ClCompile Include="os.cpp" />
     <ClCompile Include="Shared\Functions.cpp" />
     <ClCompile Include="Shared\Variables.cpp" />
+    <ClCompile Include="TimeMgr\TimeMgr.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Object Include="sos.obj" />

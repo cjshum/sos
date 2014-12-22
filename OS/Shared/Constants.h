@@ -3,7 +3,6 @@
 // single valued constants
 const int UNDEFINED = -1;
 const int MEM_SIZE = 100;
-const int TIME_QUANTUM = 1;
 
 // define enums for drum directions
 enum
@@ -13,10 +12,8 @@ enum
 
 // define enums for possible p-register values
 namespace px
-{
-	enum
-	{
-		JOB_NUM = 1,
+{	enum
+	{	JOB_NUM = 1,
 		JOB_PRIORITY = 2,
 		JOB_MEM_ADDR = 2,
 		JOB_SIZE = 3,
@@ -35,9 +32,9 @@ enum
 	REQ_BLOCK = 7
 };
 
+// define a value string constants for verbose()
 static const char *aValString[] =
-{
-	"",
+{	"",
 	"Idle CPU",				// a=1
 	"User Mode",			// a=2
 	"",

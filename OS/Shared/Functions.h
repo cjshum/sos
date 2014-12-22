@@ -17,18 +17,26 @@ extern void Dskint(int &a, int p[]);
 void initVariables();
 void setupDrum(int jobNumber, int swapDir);
 void runDrum();
-void saveCurrentJob();
+void saveCurrentJob(int currentTime);
 void setupCpu(int jobNumber);
 void runCpu(int &a, int p[]);
 void setupDisk(int jobNumber);
 void runDisk();
-void terminateJob(int jobNumber);
-void verbose(char* interruptType, int &a, int p[]);
-void quickPrint(int value);
+bool swapForSmallJob();
+bool trySwapping(list<int>::iterator readyPtr, list<Job>::iterator drumJobPtr);
 
-// things that might go away
+// helper and debug functions
 list<Job>::iterator searchJob(int jobNumber);
 list<int>::iterator searchQueue(int jobNumber, list<int> *queueObject);
+void sortedInsert(int jobNumber, list<int> *queueObject, int sortBy);
 void printQueueElements(list<int> *queueObject);
 void printQueueContents(list<int> *queueObject);
-void sortedInsert(int jobNumber, list<int> *queueObject, int sortBy);
+void verbose(char* interruptType, int &a, int p[]);
+
+// interupt handlers
+void handleDrumInt();
+void handleTroInt(int &a, int p[], int jobTimedOut);
+void handleDiskInt(int &a, int p[]);
+void handleTermReq(int jobReqSvc);
+void handleIoReq(int jobReqSvc);
+void handleBlockReq(int jobReqSvc);

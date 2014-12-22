@@ -1,6 +1,6 @@
 #pragma once
 
-#include "SpaceBlock.cpp"
+#include "SpaceBlock.h"
 #include "..\Shared\Constants.h"
 #include <list>
 using namespace std;
